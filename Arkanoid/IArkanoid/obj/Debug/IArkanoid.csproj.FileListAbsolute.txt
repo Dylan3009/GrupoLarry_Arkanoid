@@ -16,3 +16,12 @@ C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArk
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csproj.GenerateResource.cache
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.exe
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.pdb
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\IArkanoid.exe.config
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\IArkanoid.exe
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\IArkanoid.pdb
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Form1.resources
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Properties.Resources.resources
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csproj.GenerateResource.cache
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.exe
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.pdb
