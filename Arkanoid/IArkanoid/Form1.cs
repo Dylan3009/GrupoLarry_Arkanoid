@@ -16,5 +16,12 @@ namespace IArkanoid
         {
             InitializeComponent();
         }
+
+        private void btnPuntajes_Click(object sender, EventArgs e)
+        {
+            Scores window = new Scores();
+            window.Show();
+        }
+        
     }
 }

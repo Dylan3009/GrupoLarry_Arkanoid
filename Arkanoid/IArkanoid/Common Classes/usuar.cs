@@ -1,12 +1,12 @@
 ﻿namespace IArkanoid
 {
-    public class user
+    public class usuar
     {
         
         public string username { get; set; }
         public int score { get; set; }
 
-        public user()
+        public usuar()
         {
             username = "";
             score = 0;

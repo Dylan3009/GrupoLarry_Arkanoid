@@ -4,19 +4,19 @@ using System.Data;
 
 namespace IArkanoid
 {
-    public static class scoresDAO
+    public static class usuarDAO
     {
         
-        public static List<user> getLista()
+        public static List<usuar> getLista()
         {
-            string sql = "select * from pedidos";
+            string sql = "select * from usuar order by score desc";
 
             DataTable dt = Connection.realizarConsulta(sql);
 
-            List<user> lista = new List<user>();
+            List<usuar> lista = new List<usuar>();
             foreach (DataRow fila in dt.Rows)
             {
-                user u = new user();
+                usuar u = new usuar();
                 u.username = fila[0].ToString();
                 u.score = Convert.ToInt32(fila[1].ToString());
 
@@ -28,7 +28,7 @@ namespace IArkanoid
         public static void crearNuevo(string username)
         {
             string sql = String.Format(
-                "insert into user(username) " +
+                "insert into usuar(username) " +
                 "values('{0}');",
                 username);
             
@@ -38,7 +38,7 @@ namespace IArkanoid
         public static void actualizarpuntaje(int score, string username)
         {
             string sql = String.Format(
-                "update user set score={0} where username='{1}';",
+                "update usuar set score={0} where username='{1}';",
                 score, username);
             
             Connection.realizarAccion(sql);
@@ -47,7 +47,7 @@ namespace IArkanoid
         public static void eliminar(string username)
         {
             string sql = String.Format(
-                "delete from user where username ='{0}'; ",
+                "delete from usuar where username ='{0}'; ",
                 username);
             
             Connection.realizarAccion(sql);

@@ -7,11 +7,11 @@
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Common Classes" t="Include">
-        <e p="user.cs" t="Include" />
+        <e p="usuar.cs" t="Include" />
       </e>
       <e p="DataBase Connection" t="Include">
         <e p="Connection.cs" t="Include" />
-        <e p="scoresDAO.cs" t="Include" />
+        <e p="usuarDAO.cs" t="Include" />
       </e>
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
@@ -29,6 +29,9 @@
         <e p="Settings.Designer.cs" t="Include" />
         <e p="Settings.settings" t="Include" />
       </e>
+      <e p="Scores.cs" t="Include" />
+      <e p="Scores.Designer.cs" t="Include" />
+      <e p="Scores.resx" t="Include" />
     </e>
   </component>
 </project>

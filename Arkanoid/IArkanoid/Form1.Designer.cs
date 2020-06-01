@@ -33,9 +33,9 @@
                 new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnPuntajes = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnNewGame = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,9 +54,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnPuntajes, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnNewGame, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -71,7 +71,7 @@
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 662);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -85,66 +85,67 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnPuntajes
             // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+            this.btnPuntajes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPuntajes.BackColor = System.Drawing.Color.Transparent;
+            this.btnPuntajes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPuntajes.FlatAppearance.BorderSize = 0;
+            this.btnPuntajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+            this.btnPuntajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bebas Neue", 48F, System.Drawing.FontStyle.Bold,
+            this.btnPuntajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPuntajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button2.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button2.Location = new System.Drawing.Point(3, 443);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(831, 104);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "PUNTAJES";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPuntajes.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnPuntajes.Location = new System.Drawing.Point(3, 443);
+            this.btnPuntajes.Name = "btnPuntajes";
+            this.btnPuntajes.Size = new System.Drawing.Size(831, 104);
+            this.btnPuntajes.TabIndex = 1;
+            this.btnPuntajes.Text = "PUNTAJES";
+            this.btnPuntajes.UseVisualStyleBackColor = false;
+            this.btnPuntajes.Click += new System.EventHandler(this.btnPuntajes_Click);
             // 
-            // button3
+            // btnClose
             // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+            this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bebas Neue", 48F, System.Drawing.FontStyle.Bold,
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(3, 553);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(831, 105);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "SALIR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
+            this.btnClose.Location = new System.Drawing.Point(3, 553);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(831, 106);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "SALIR";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnNewGame
             // 
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+            this.btnNewGame.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNewGame.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNewGame.FlatAppearance.BorderSize = 0;
+            this.btnNewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+            this.btnNewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Bebas Neue", 48F, System.Drawing.FontStyle.Bold,
+            this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button5.Location = new System.Drawing.Point(3, 333);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(831, 104);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "NUEVO JUEGO";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnNewGame.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnNewGame.Location = new System.Drawing.Point(3, 333);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(831, 104);
+            this.btnNewGame.TabIndex = 2;
+            this.btnNewGame.Text = "NUEVO JUEGO";
+            this.btnNewGame.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -180,7 +181,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bebas Neue", 48F, System.Drawing.FontStyle.Bold,
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.ForeColor = System.Drawing.Color.Goldenrod;
             this.button1.Location = new System.Drawing.Point(3, 10);
@@ -196,7 +197,7 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bebas Neue", 48F, System.Drawing.FontStyle.Bold,
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button4.ForeColor = System.Drawing.Color.DarkRed;
             this.button4.Location = new System.Drawing.Point(3, 17);
@@ -210,11 +211,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 661);
+            this.ClientSize = new System.Drawing.Size(834, 662);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(850, 700);
             this.MinimumSize = new System.Drawing.Size(850, 700);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arkanoid";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
@@ -227,12 +229,12 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button btnPuntajes;
+        private System.Windows.Forms.Button btnClose;
     }
 }
