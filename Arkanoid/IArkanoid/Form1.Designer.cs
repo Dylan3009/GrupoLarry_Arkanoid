@@ -48,7 +48,10 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.tableLayoutPanel1.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("tableLayoutPanel1.BackgroundImage")));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(
@@ -71,17 +74,18 @@
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 662);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(831, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -89,7 +93,7 @@
             // 
             this.btnPuntajes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPuntajes.BackColor = System.Drawing.Color.Transparent;
-            this.btnPuntajes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPuntajes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPuntajes.FlatAppearance.BorderSize = 0;
             this.btnPuntajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
@@ -98,7 +102,7 @@
             this.btnPuntajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPuntajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPuntajes.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnPuntajes.ForeColor = System.Drawing.Color.Gold;
             this.btnPuntajes.Location = new System.Drawing.Point(3, 443);
             this.btnPuntajes.Name = "btnPuntajes";
             this.btnPuntajes.Size = new System.Drawing.Size(831, 104);
@@ -110,7 +114,8 @@
             // btnClose
             // 
             this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
@@ -119,18 +124,20 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Red;
+            this.btnClose.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnClose.Location = new System.Drawing.Point(3, 553);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(831, 106);
+            this.btnClose.Size = new System.Drawing.Size(831, 105);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "SALIR";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnNewGame
             // 
             this.btnNewGame.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNewGame.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNewGame.BackColor = System.Drawing.Color.Transparent;
+            this.btnNewGame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNewGame.FlatAppearance.BorderSize = 0;
             this.btnNewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
@@ -139,13 +146,13 @@
             this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnNewGame.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnNewGame.ForeColor = System.Drawing.Color.Gold;
             this.btnNewGame.Location = new System.Drawing.Point(3, 333);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(831, 104);
             this.btnNewGame.TabIndex = 2;
             this.btnNewGame.Text = "NUEVO JUEGO";
-            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel2
             // 
@@ -211,7 +218,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 662);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(834, 661);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(850, 700);
             this.MinimumSize = new System.Drawing.Size(850, 700);

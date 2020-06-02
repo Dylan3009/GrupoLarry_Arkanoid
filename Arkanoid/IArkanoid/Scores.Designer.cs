@@ -137,7 +137,7 @@ namespace IArkanoid
             this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(237, 379);
+            this.label6.Location = new System.Drawing.Point(237, 378);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 27);
             this.label6.TabIndex = 7;
@@ -185,7 +185,7 @@ namespace IArkanoid
             this.label10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(237, 244);
+            this.label10.Location = new System.Drawing.Point(237, 243);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 27);
             this.label10.TabIndex = 11;
