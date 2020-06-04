@@ -99,3 +99,5 @@ C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArk
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csproj.CopyComplete
 C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.NewGame.resources
 C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources
+C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.NewGame.resources
+C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources

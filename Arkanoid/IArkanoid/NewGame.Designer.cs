@@ -376,6 +376,7 @@ namespace IArkanoid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
                 ((int) (((byte) (192)))));
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
@@ -405,6 +406,7 @@ namespace IArkanoid
             this.Controls.Add(this.ptblogo);
             this.DoubleBuffered = true;
             this.Name = "NewGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NewGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize) (this.ptblogo)).EndInit();

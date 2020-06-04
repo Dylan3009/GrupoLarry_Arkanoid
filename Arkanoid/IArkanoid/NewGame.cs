@@ -107,11 +107,11 @@ namespace IArkanoid
         {
             if (e.KeyCode == Keys.Left && player.Left > 0)
             {
-                player.Left -= 8;
+                player.Left -= 20;
             }
             if (e.KeyCode == Keys.Right && player.Right < 720)
             {
-                player.Left += 8;
+                player.Left += 20;
             }
         }
 
