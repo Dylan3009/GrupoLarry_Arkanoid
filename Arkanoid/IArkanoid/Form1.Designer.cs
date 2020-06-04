@@ -49,9 +49,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.tableLayoutPanel1.BackgroundImage =
-                ((System.Drawing.Image) (resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
+                ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(
@@ -100,9 +99,9 @@
             this.btnPuntajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.btnPuntajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPuntajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
+            this.btnPuntajes.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPuntajes.ForeColor = System.Drawing.Color.Gold;
+            this.btnPuntajes.ForeColor = System.Drawing.Color.White;
             this.btnPuntajes.Location = new System.Drawing.Point(3, 443);
             this.btnPuntajes.Name = "btnPuntajes";
             this.btnPuntajes.Size = new System.Drawing.Size(831, 104);
@@ -122,9 +121,9 @@
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
+            this.btnClose.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnClose.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
             this.btnClose.Location = new System.Drawing.Point(3, 553);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(831, 105);
@@ -144,9 +143,9 @@
             this.btnNewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold,
+            this.btnNewGame.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnNewGame.ForeColor = System.Drawing.Color.Gold;
+            this.btnNewGame.ForeColor = System.Drawing.Color.White;
             this.btnNewGame.Location = new System.Drawing.Point(3, 333);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(831, 104);
