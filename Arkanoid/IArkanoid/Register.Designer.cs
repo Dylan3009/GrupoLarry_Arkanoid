@@ -48,9 +48,9 @@ namespace IArkanoid
             this.label1.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(111, 245);
+            this.label1.Location = new System.Drawing.Point(110, 245);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 80);
+            this.label1.Size = new System.Drawing.Size(171, 80);
             this.label1.TabIndex = 1;
             this.label1.Text = "USUARIO:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,9 +60,9 @@ namespace IArkanoid
             this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(111, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(592, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(591, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -79,7 +79,7 @@ namespace IArkanoid
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 420F));
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 2);
@@ -99,7 +99,7 @@ namespace IArkanoid
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -108,9 +108,9 @@ namespace IArkanoid
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBox1.Location = new System.Drawing.Point(289, 261);
+            this.textBox1.Location = new System.Drawing.Point(288, 261);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(414, 47);
+            this.textBox1.Size = new System.Drawing.Size(412, 47);
             this.textBox1.TabIndex = 2;
             // 
             // button1
@@ -121,9 +121,9 @@ namespace IArkanoid
             this.button1.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(111, 395);
+            this.button1.Location = new System.Drawing.Point(110, 394);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(592, 71);
+            this.button1.Size = new System.Drawing.Size(591, 71);
             this.button1.TabIndex = 3;
             this.button1.Text = "CONTINUAR";
             this.button1.UseVisualStyleBackColor = true;
