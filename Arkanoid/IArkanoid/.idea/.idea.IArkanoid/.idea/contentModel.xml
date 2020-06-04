@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\renej\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\renej\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IArkanoid.566192525.00" t="ExcludeRecursive" />
-    <e p="C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid" t="IncludeRecursive">
+    <e p="C:\Users\DELL\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\DELL\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IArkanoid.-510560193.00" t="ExcludeRecursive" />
+    <e p="C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Common Classes" t="Include">
@@ -35,6 +35,31 @@
       <e p="Register.cs" t="Include" />
       <e p="Register.Designer.cs" t="Include" />
       <e p="Register.resx" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="bloque_amarillo.PNG" t="Include" />
+        <e p="bloque_amarillo_roto.PNG" t="Include" />
+        <e p="bloque_azul.PNG" t="Include" />
+        <e p="bloque_azul_roto.PNG" t="Include" />
+        <e p="bloque_cafe.PNG" t="Include" />
+        <e p="bloque_cafe_roto.PNG" t="Include" />
+        <e p="bloque_celeste.PNG" t="Include" />
+        <e p="bloque_celeste_roto.PNG" t="Include" />
+        <e p="bloque_gris.PNG" t="Include" />
+        <e p="bloque_gris_roto.PNG" t="Include" />
+        <e p="bloque_morado.PNG" t="Include" />
+        <e p="bloque_morado_roto.PNG" t="Include" />
+        <e p="bloque_naranja.PNG" t="Include" />
+        <e p="bloque_naranja_roto.PNG" t="Include" />
+        <e p="bloque_rojo.PNG" t="Include" />
+        <e p="bloque_rojo_roto.PNG" t="Include" />
+        <e p="bloque_verde.PNG" t="Include" />
+        <e p="bloque_verde_roto.PNG" t="Include" />
+        <e p="bloque_verdeoscuro.PNG" t="Include" />
+        <e p="bloque_verdeoscuro_roto.PNG" t="Include" />
+        <e p="circle_cropped.png" t="Include" />
+        <e p="corazon.PNG" t="Include" />
+        <e p="player.PNG" t="Include" />
+      </e>
       <e p="Scores.cs" t="Include" />
       <e p="Scores.Designer.cs" t="Include" />
       <e p="Scores.resx" t="Include" />

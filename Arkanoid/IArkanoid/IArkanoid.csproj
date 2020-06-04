@@ -152,5 +152,30 @@
     <ItemGroup>
         <None Include="App.config" />
     </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\bloque_amarillo.PNG" />
+      <Content Include="Resources\bloque_amarillo_roto.PNG" />
+      <Content Include="Resources\bloque_azul.PNG" />
+      <Content Include="Resources\bloque_azul_roto.PNG" />
+      <Content Include="Resources\bloque_cafe.PNG" />
+      <Content Include="Resources\bloque_cafe_roto.PNG" />
+      <Content Include="Resources\bloque_celeste.PNG" />
+      <Content Include="Resources\bloque_celeste_roto.PNG" />
+      <Content Include="Resources\bloque_gris.PNG" />
+      <Content Include="Resources\bloque_gris_roto.PNG" />
+      <Content Include="Resources\bloque_morado.PNG" />
+      <Content Include="Resources\bloque_morado_roto.PNG" />
+      <Content Include="Resources\bloque_naranja.PNG" />
+      <Content Include="Resources\bloque_naranja_roto.PNG" />
+      <Content Include="Resources\bloque_rojo.PNG" />
+      <Content Include="Resources\bloque_rojo_roto.PNG" />
+      <Content Include="Resources\bloque_verde.PNG" />
+      <Content Include="Resources\bloque_verdeoscuro.PNG" />
+      <Content Include="Resources\bloque_verdeoscuro_roto.PNG" />
+      <Content Include="Resources\bloque_verde_roto.PNG" />
+      <Content Include="Resources\circle_cropped.png" />
+      <Content Include="Resources\corazon.PNG" />
+      <Content Include="Resources\player.PNG" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

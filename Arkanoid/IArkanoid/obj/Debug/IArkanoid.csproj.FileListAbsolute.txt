@@ -97,3 +97,5 @@ C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\Syst
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.exe.config
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Scores.resources
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csproj.CopyComplete
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.NewGame.resources
+C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources

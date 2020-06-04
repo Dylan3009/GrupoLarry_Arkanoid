@@ -73,7 +73,7 @@
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 662);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -126,7 +126,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.Red;
             this.btnClose.Location = new System.Drawing.Point(3, 553);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(831, 105);
+            this.btnClose.Size = new System.Drawing.Size(831, 106);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "SALIR";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -152,6 +152,7 @@
             this.btnNewGame.TabIndex = 2;
             this.btnNewGame.Text = "NUEVO JUEGO";
             this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -218,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(834, 661);
+            this.ClientSize = new System.Drawing.Size(834, 662);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(850, 700);
             this.MinimumSize = new System.Drawing.Size(850, 700);
