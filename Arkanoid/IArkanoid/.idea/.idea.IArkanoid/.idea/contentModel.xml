@@ -9,6 +9,7 @@
       <e p="Common Classes" t="Include">
         <e p="usuar.cs" t="Include" />
       </e>
+      <e p="CustomPicturebox.cs" t="Include" />
       <e p="DataBase Connection" t="Include">
         <e p="Connection.cs" t="Include" />
         <e p="usuarDAO.cs" t="Include" />
@@ -16,9 +17,6 @@
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />
-      <e p="Game.cs" t="Include" />
-      <e p="Game.Designer.cs" t="Include" />
-      <e p="Game.resx" t="Include" />
       <e p="IArkanoid.csproj" t="IncludeRecursive" />
       <e p="IArkanoid.sln" t="IncludeFlat" />
       <e p="NewGame.cs" t="Include" />

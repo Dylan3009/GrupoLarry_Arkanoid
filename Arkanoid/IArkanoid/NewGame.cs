@@ -6,9 +6,216 @@ namespace IArkanoid
 {
     public partial class NewGame : Form
     {
+    
+        private CustomPicturebox[,] cpb;
+    
         public NewGame()
         {
             InitializeComponent();
+            Height = ClientSize.Height;
+            Width = ClientSize.Width;
+            WindowState = FormWindowState.Maximized;
+        }
+
+        int Ball_x = 5;
+        int Ball_y = 5;
+        int score = 0;
+        int lives = 3;
+
+
+        private void NewGame_Load(object sender, EventArgs e)
+        {
+            player.Top = (Height - player.Height) - 60;
+            player.Left = (Width - player.Width) - 700;
+            Ball.Top = (Height - Ball.Height) - 100;
+            Ball.Left = (Width - Ball.Width) - 750;
+            lblLives.Top = (Height - lblLives.Height) - 830;
+            ptbLogo.Top = (Height - ptbLogo.Height) - 830;
+            ptbLogo.Left = (Width - ptbLogo.Width) - 500;
+            lblScore.Top = (Height - lblLives.Height) - 830;
+            lblScore.Left = (Width - lblScore.Width) - 15;
+            heart1.Top = (Height - lblLives.Height) - 820;
+            heart1.Left = (Width - heart1.Width) - 1450;
+            heart2.Top = (Height - lblLives.Height) - 820;
+            heart2.Left = (Width - heart1.Width) - 1400;
+            heart3.Top = (Height - lblLives.Height) - 820;
+            heart3.Left = (Width - heart1.Width) - 1350;
+            
+            Loadtiles();
+        }
+        
+        private void Loadtiles()
+        {
+            int xAxis = 10;
+            int yAxis = 5;
+
+            int pbHeight = (int) (Height * 0.3) / yAxis ;
+            int pbWidth = Width / xAxis;
+
+            cpb = new CustomPicturebox[yAxis, xAxis];
+
+            for (int i = 0; i < yAxis; i++)
+            {
+                for (int j = 0; j < xAxis; j++)
+                {
+                    cpb[i, j] = new CustomPicturebox();
+
+                    if (i == 0)
+                        cpb[i, j].Golpes = 2;
+                    else
+                        cpb[i, j].Golpes = 1;
+
+                    cpb[i, j].Height = pbHeight;
+                    cpb[i, j].Width = pbWidth;
+                    
+                    //posicion de left, y posicion de top
+                    cpb[i, j].Left = j * pbWidth;
+                    cpb[i, j].Top = (i * pbHeight) + 60;
+
+                    if (i == 0)
+                    {
+                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_gris;
+                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                        cpb[i, j].Tag = "blinded";
+                    }
+
+                    if (i == 1)
+                    {
+                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_rojo;
+                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                        cpb[i, j].Tag = "block";
+                    }
+                    
+                    if (i == 2)
+                    {
+                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_azul;
+                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                        cpb[i, j].Tag = "block";
+                    }
+                    
+                    if (i == 3)
+                    {
+                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_verde;
+                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                        cpb[i, j].Tag = "block";
+                    }
+                    
+                    if (i == 4)
+                    {
+                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_amarillo;
+                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                        cpb[i, j].Tag = "block";
+                    }
+
+                    Controls.Add(cpb[i, j]);
+                }
+            }
+        }
+        
+        private void Juegoterminado()
+        {
+            if (score > 31)
+            {
+                timer1.Stop();
+                MessageBox.Show("Felicidades!", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
+            }
+
+            if (Ball.Top + Ball.Height > ClientSize.Height)
+            {
+                switch (lives)
+                {
+                    case 3:
+                        lives--;
+                        Controls.Remove(heart3);
+                        Ball_y = -Ball_y;
+                        break;
+                    case 2:
+                        lives--;
+                        Controls.Remove(heart2);
+                        Ball_y = -Ball_y;
+                        break;
+                    case 1:
+                        lives--;
+                        Controls.Remove(heart1);
+                        timer1.Stop();
+                        //timer2.Stop();
+                        MessageBox.Show("Game Over", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Application.Exit();
+                        break;
+                }
+            }
+        }
+        
+        private void scorecalculation()
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is CustomPicturebox && x.Tag == "block")
+                {
+                    if (Ball.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        Controls.Remove(x);
+                        Ball_y = -Ball_y;
+                        score++;
+                        lblScore.Text = "Score :" + score;
+                    }
+                }
+                else
+                {
+                    if (x is PictureBox && x.Tag == "specialblock")
+                    {
+                        if (Ball.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            Controls.Remove(x);
+                            Ball_y = -Ball_y;
+                            score+=5;
+                            lblScore.Text = "Score :" + score;
+                        }
+                    }
+                }
+            }
+        }
+        
+        private void Ball_movement()
+        {
+            Ball.Left += Ball_x;
+            Ball.Top += Ball_y;
+             
+            if (Ball.Left + Ball.Width > ClientSize.Width || Ball.Left < 0)
+            {
+                Ball_x = -Ball_x;
+            }
+
+            if (Ball.Top < 0 || Ball.Bounds.IntersectsWith(lblLives.Bounds) || 
+                Ball.Bounds.IntersectsWith(ptbLogo.Bounds) || Ball.Bounds.IntersectsWith(lblScore.Bounds))
+            {
+                Ball_y = -Ball_y;
+            }
+
+            if (Ball.Bounds.IntersectsWith(player.Bounds))
+            {
+                Ball_y = -Ball_y;
+            }
+        }
+
+        private void NewGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left && player.Left > 0)
+            {
+                player.Left -= 8;
+            }
+            if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) //1600
+            {
+                player.Left += 8;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Ball_movement();
+            scorecalculation();
+            Juegoterminado();
         }
         
     }

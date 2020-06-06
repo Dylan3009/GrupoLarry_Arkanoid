@@ -100,4 +100,3 @@ C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\
 C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.NewGame.resources
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources
-C:\Users\DELL\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Game.resources

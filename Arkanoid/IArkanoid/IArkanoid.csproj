@@ -92,6 +92,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Common Classes\usuar.cs" />
+        <Compile Include="CustomPicturebox.cs" />
         <Compile Include="DataBase Connection\Connection.cs" />
         <Compile Include="DataBase Connection\usuarDAO.cs" />
         <Compile Include="Form1.cs">
@@ -99,12 +100,6 @@
         </Compile>
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Game.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Game.Designer.cs">
-          <DependentUpon>Game.cs</DependentUpon>
         </Compile>
         <Compile Include="NewGame.cs">
           <SubType>Form</SubType>
@@ -128,9 +123,6 @@
         </Compile>
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Game.resx">
-          <DependentUpon>Game.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="NewGame.resx">
           <DependentUpon>NewGame.cs</DependentUpon>
