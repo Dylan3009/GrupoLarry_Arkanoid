@@ -75,7 +75,7 @@ namespace IArkanoid
             this.ptbLogo.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
                 ((int) (((byte) (64)))));
             this.ptbLogo.Image = ((System.Drawing.Image) (resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.Location = new System.Drawing.Point(242, 0);
+            this.ptbLogo.Location = new System.Drawing.Point(241, 0);
             this.ptbLogo.Name = "ptbLogo";
             this.ptbLogo.Size = new System.Drawing.Size(388, 57);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +93,7 @@ namespace IArkanoid
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(627, 0);
+            this.lblScore.Location = new System.Drawing.Point(626, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(238, 57);
             this.lblScore.TabIndex = 2;
