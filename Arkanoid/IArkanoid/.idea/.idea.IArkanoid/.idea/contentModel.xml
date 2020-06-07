@@ -7,9 +7,10 @@
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Common Classes" t="Include">
+        <e p="CustomPicturebox.cs" t="Include" />
+        <e p="JuegoIniciado.cs" t="Include" />
         <e p="usuar.cs" t="Include" />
       </e>
-      <e p="CustomPicturebox.cs" t="Include" />
       <e p="DataBase Connection" t="Include">
         <e p="Connection.cs" t="Include" />
         <e p="usuarDAO.cs" t="Include" />

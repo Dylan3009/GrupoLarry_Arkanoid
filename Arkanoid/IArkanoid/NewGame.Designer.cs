@@ -61,34 +61,41 @@ namespace IArkanoid
             this.lblLives.ForeColor = System.Drawing.Color.White;
             this.lblLives.Location = new System.Drawing.Point(-1, 0);
             this.lblLives.Name = "lblLives";
-            this.lblLives.Size = new System.Drawing.Size(587, 57);
+            this.lblLives.Size = new System.Drawing.Size(248, 57);
             this.lblLives.TabIndex = 0;
             this.lblLives.Text = "LIVES:";
             this.lblLives.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ptbLogo
             // 
+            this.ptbLogo.Anchor =
+                ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top |
+                                                        System.Windows.Forms.AnchorStyles.Left) |
+                                                       System.Windows.Forms.AnchorStyles.Right)));
             this.ptbLogo.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
                 ((int) (((byte) (64)))));
             this.ptbLogo.Image = ((System.Drawing.Image) (resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.Location = new System.Drawing.Point(-1, 60);
+            this.ptbLogo.Location = new System.Drawing.Point(242, 0);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(723, 57);
+            this.ptbLogo.Size = new System.Drawing.Size(388, 57);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 1;
             this.ptbLogo.TabStop = false;
             // 
             // lblScore
             // 
+            this.lblScore.Anchor =
+                ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top |
+                                                       System.Windows.Forms.AnchorStyles.Right)));
             this.lblScore.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
                 ((int) (((byte) (64)))));
             this.lblScore.Font = new System.Drawing.Font("Impact", 18F,
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(0, 120);
+            this.lblScore.Location = new System.Drawing.Point(627, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(614, 57);
+            this.lblScore.Size = new System.Drawing.Size(238, 57);
             this.lblScore.TabIndex = 2;
             this.lblScore.Text = "SCORE:";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

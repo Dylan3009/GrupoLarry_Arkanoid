@@ -22,24 +22,18 @@ namespace IArkanoid
         int score = 0;
         int lives = 3;
 
-
         private void NewGame_Load(object sender, EventArgs e)
         {
             player.Top = (Height - player.Height) - 60;
             player.Left = (Width - player.Width) - 700;
             Ball.Top = (Height - Ball.Height) - 100;
             Ball.Left = (Width - Ball.Width) - 750;
-            lblLives.Top = (Height - lblLives.Height) - 830;
-            ptbLogo.Top = (Height - ptbLogo.Height) - 830;
-            ptbLogo.Left = (Width - ptbLogo.Width) - 500;
-            lblScore.Top = (Height - lblLives.Height) - 830;
-            lblScore.Left = (Width - lblScore.Width) - 15;
-            heart1.Top = (Height - lblLives.Height) - 820;
-            heart1.Left = (Width - heart1.Width) - 1450;
-            heart2.Top = (Height - lblLives.Height) - 820;
-            heart2.Left = (Width - heart1.Width) - 1400;
-            heart3.Top = (Height - lblLives.Height) - 820;
-            heart3.Left = (Width - heart1.Width) - 1350;
+            heart1.Top = lblLives.Top + 10;
+            heart1.Left = lblLives.Left + 110;
+            heart2.Top = lblLives.Top + 10;
+            heart2.Left = lblLives.Left + 160;
+            heart3.Top = lblLives.Top + 10;
+            heart3.Left = lblLives.Left + 210;
             
             Loadtiles();
         }
@@ -201,21 +195,47 @@ namespace IArkanoid
 
         private void NewGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left && player.Left > 0)
+            if (e.KeyCode == Keys.Enter) //probando
             {
-                player.Left -= 8;
+                JuegoIniciado.startgame = true;
             }
-            if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) //1600
+
+            if (JuegoIniciado.startgame == true)
             {
-                player.Left += 8;
+                if (e.KeyCode == Keys.Left && player.Left > 0)
+                {
+                    player.Left -= 8;
+                }
+
+                if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) 
+                {
+                    player.Left += 8;
+                }
+            }
+            else
+            {
+                if (e.KeyCode == Keys.Left && player.Left > 0)
+                    {
+                        player.Left -= 8;
+                        Ball.Left -= 8;
+                    }
+
+                    if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) 
+                    {
+                        player.Left += 8;
+                        Ball.Left += 8;
+                    }
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Ball_movement();
             scorecalculation();
             Juegoterminado();
+            if (JuegoIniciado.startgame == true)
+            {
+                Ball_movement();
+            }
         }
         
     }
