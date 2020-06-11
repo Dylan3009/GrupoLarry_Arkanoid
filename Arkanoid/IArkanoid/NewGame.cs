@@ -20,7 +20,6 @@ namespace IArkanoid
         int Ball_x = 5;
         int Ball_y = 5;
         int score = 0;
-        int lives = 3;
 
         private void NewGame_Load(object sender, EventArgs e)
         {
@@ -54,7 +53,7 @@ namespace IArkanoid
                 {
                     cpb[i, j] = new CustomPicturebox();
 
-                    if (i == 0)
+                    if (i == 0 || i==4)
                         cpb[i, j].Golpes = 2;
                     else
                         cpb[i, j].Golpes = 1;
@@ -70,7 +69,7 @@ namespace IArkanoid
                     {
                         cpb[i, j].BackgroundImage = Properties.Resources.bloque_gris;
                         cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "blinded";
+                        cpb[i, j].Tag = "greyblinded";
                     }
 
                     if (i == 1)
@@ -98,7 +97,7 @@ namespace IArkanoid
                     {
                         cpb[i, j].BackgroundImage = Properties.Resources.bloque_amarillo;
                         cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "block";
+                        cpb[i, j].Tag = "yellowblinded";
                     }
 
                     Controls.Add(cpb[i, j]);
@@ -108,7 +107,7 @@ namespace IArkanoid
         
         private void Juegoterminado()
         {
-            if (score > 31)
+            if (score > 89)
             {
                 timer1.Stop();
                 MessageBox.Show("Felicidades!", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -117,23 +116,22 @@ namespace IArkanoid
 
             if (Ball.Top + Ball.Height > ClientSize.Height)
             {
-                switch (lives)
+                switch (Lives.live)
                 {
                     case 3:
-                        lives--;
+                        Lives.live--;
                         Controls.Remove(heart3);
                         Ball_y = -Ball_y;
                         break;
                     case 2:
-                        lives--;
+                        Lives.live--;
                         Controls.Remove(heart2);
                         Ball_y = -Ball_y;
                         break;
                     case 1:
-                        lives--;
+                        Lives.live--;
                         Controls.Remove(heart1);
                         timer1.Stop();
-                        //timer2.Stop();
                         MessageBox.Show("Game Over", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Application.Exit();
                         break;
@@ -163,9 +161,35 @@ namespace IArkanoid
                         {
                             Controls.Remove(x);
                             Ball_y = -Ball_y;
-                            score+=5;
+                            score+=3;
                             lblScore.Text = "Score :" + score;
                         }
+                    }
+                }
+            }
+        }
+        
+        private void blindedblock()
+        {
+            foreach (Control z in this.Controls)
+            {
+                if (z is CustomPicturebox && z.Tag == "yellowblinded")
+                {
+                    if (Ball.Bounds.IntersectsWith(z.Bounds))
+                    {
+                        Ball_y = -Ball_y;
+                        z.BackgroundImage = Properties.Resources.bloque_amarillo_roto;
+                        z.Tag = "specialblock";
+                    }
+                }
+
+                if (z is CustomPicturebox && z.Tag == "greyblinded")
+                {
+                    if (Ball.Bounds.IntersectsWith(z.Bounds))
+                    {
+                        Ball_y = -Ball_y;
+                        z.BackgroundImage = Properties.Resources.bloque_gris_roto;
+                        z.Tag = "specialblock";
                     }
                 }
             }
@@ -231,6 +255,7 @@ namespace IArkanoid
         private void timer1_Tick(object sender, EventArgs e)
         {
             scorecalculation();
+            blindedblock();
             Juegoterminado();
             if (JuegoIniciado.startgame == true)
             {
