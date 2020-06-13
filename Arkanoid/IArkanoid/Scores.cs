@@ -16,7 +16,7 @@ namespace IArkanoid
             actualizarcontroles();
         }
         
-        private void actualizarcontroles()
+        private void actualizarcontroles() // llenando el Data Grid View
         {
             // Realizar consulta a la base de datos
             List<usuar> lista = usuarDAO.getLista();   
