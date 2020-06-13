@@ -8,7 +8,7 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="Common Classes" t="Include">
         <e p="CustomPicturebox.cs" t="Include" />
-        <e p="JuegoIniciado.cs" t="Include" />
+        <e p="DatosJuego.cs" t="Include" />
         <e p="Lives.cs" t="Include" />
         <e p="usuar.cs" t="Include" />
       </e>

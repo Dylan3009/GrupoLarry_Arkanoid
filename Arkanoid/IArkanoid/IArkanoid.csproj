@@ -92,7 +92,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Common Classes\CustomPicturebox.cs" />
-        <Compile Include="Common Classes\JuegoIniciado.cs" />
+        <Compile Include="Common Classes\DatosJuego.cs" />
         <Compile Include="Common Classes\Lives.cs" />
         <Compile Include="Common Classes\usuar.cs" />
         <Compile Include="DataBase Connection\Connection.cs" />

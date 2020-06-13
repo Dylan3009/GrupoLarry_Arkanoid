@@ -43,6 +43,7 @@ namespace IArkanoid
             this.heart2 = new System.Windows.Forms.PictureBox();
             this.heart1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblEnter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.Ball)).BeginInit();
@@ -160,6 +161,21 @@ namespace IArkanoid
             this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblEnter
+            // 
+            this.lblEnter.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
+                ((int) (((byte) (64)))));
+            this.lblEnter.Font = new System.Drawing.Font("Impact", 26.25F,
+                ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblEnter.ForeColor = System.Drawing.Color.White;
+            this.lblEnter.Location = new System.Drawing.Point(284, 180);
+            this.lblEnter.Name = "lblEnter";
+            this.lblEnter.Size = new System.Drawing.Size(345, 108);
+            this.lblEnter.TabIndex = 8;
+            this.lblEnter.Text = "PRESS ENTER TO START";
+            this.lblEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // NewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -168,6 +184,7 @@ namespace IArkanoid
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(862, 510);
+            this.Controls.Add(this.lblEnter);
             this.Controls.Add(this.heart1);
             this.Controls.Add(this.heart2);
             this.Controls.Add(this.heart3);
@@ -202,5 +219,6 @@ namespace IArkanoid
         private System.Windows.Forms.PictureBox heart2;
         private System.Windows.Forms.PictureBox heart3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblEnter;
     }
 }

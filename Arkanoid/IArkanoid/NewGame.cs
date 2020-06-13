@@ -16,28 +16,26 @@ namespace IArkanoid
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
         }
-
-        int Ball_x = 5;
-        int Ball_y = 5;
-        int score = 0;
-
+        
         private void NewGame_Load(object sender, EventArgs e)
         {
-            player.Top = (Height - player.Height) - 60;
-            player.Left = (Width - player.Width) - 700;
+            player.Top = (Height - player.Height) - 60;  //posicionando los label Score y Lives también
+            player.Left = (Width - player.Width) - 700;  // el PictureBox con el logo y los Corazones
             Ball.Top = (Height - Ball.Height) - 100;
             Ball.Left = (Width - Ball.Width) - 750;
-            heart1.Top = lblLives.Top + 10;
+            heart1.Top = lblLives.Top + 10;            
             heart1.Left = lblLives.Left + 110;
             heart2.Top = lblLives.Top + 10;
             heart2.Left = lblLives.Left + 160;
             heart3.Top = lblLives.Top + 10;
             heart3.Left = lblLives.Left + 210;
+            lblEnter.Top = ptbLogo.Top + 500;
+            lblEnter.Left = ptbLogo.Left + 450;
             
             Loadtiles();
         }
         
-        private void Loadtiles()
+        private void Loadtiles() //Carga los bloques en pantalla
         {
             int xAxis = 10;
             int yAxis = 5;
@@ -52,12 +50,7 @@ namespace IArkanoid
                 for (int j = 0; j < xAxis; j++)
                 {
                     cpb[i, j] = new CustomPicturebox();
-
-                    if (i == 0 || i==4)
-                        cpb[i, j].Golpes = 2;
-                    else
-                        cpb[i, j].Golpes = 1;
-
+                    
                     cpb[i, j].Height = pbHeight;
                     cpb[i, j].Width = pbWidth;
                     
@@ -107,26 +100,26 @@ namespace IArkanoid
         
         private void Juegoterminado()
         {
-            if (score > 89)
+            if (DatosJuego.score > 89)
             {
                 timer1.Stop();
                 MessageBox.Show("Felicidades!", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
             }
 
-            if (Ball.Top + Ball.Height > ClientSize.Height)
+            if (Ball.Top + Ball.Height > ClientSize.Height) // verificando si la pelota toco el fondo 
             {
-                switch (Lives.live)
+                switch (Lives.live) //verificando la cantidad de vidas
                 {
                     case 3:
                         Lives.live--;
                         Controls.Remove(heart3);
-                        Ball_y = -Ball_y;
+                        DatosJuego.y_move = -DatosJuego.y_move;
                         break;
                     case 2:
                         Lives.live--;
                         Controls.Remove(heart2);
-                        Ball_y = -Ball_y;
+                        DatosJuego.y_move = -DatosJuego.y_move;
                         break;
                     case 1:
                         Lives.live--;
@@ -139,7 +132,7 @@ namespace IArkanoid
             }
         }
         
-        private void scorecalculation()
+        private void scorecalculation() // calculando el puntaje
         {
             foreach (Control x in this.Controls)
             {
@@ -148,9 +141,9 @@ namespace IArkanoid
                     if (Ball.Bounds.IntersectsWith(x.Bounds))
                     {
                         Controls.Remove(x);
-                        Ball_y = -Ball_y;
-                        score++;
-                        lblScore.Text = "Score :" + score;
+                        DatosJuego.y_move = -DatosJuego.y_move;
+                        DatosJuego.score++;
+                        lblScore.Text = "Score :" + DatosJuego.score;
                     }
                 }
                 else
@@ -160,16 +153,16 @@ namespace IArkanoid
                         if (Ball.Bounds.IntersectsWith(x.Bounds))
                         {
                             Controls.Remove(x);
-                            Ball_y = -Ball_y;
-                            score+=3;
-                            lblScore.Text = "Score :" + score;
+                            DatosJuego.y_move = -DatosJuego.y_move;
+                            DatosJuego.score+=3;
+                            lblScore.Text = "Score :" + DatosJuego.score;
                         }
                     }
                 }
             }
         }
         
-        private void blindedblock()
+        private void Blindedblock() //cambia la imagen para los bloques blindados
         {
             foreach (Control z in this.Controls)
             {
@@ -177,7 +170,7 @@ namespace IArkanoid
                 {
                     if (Ball.Bounds.IntersectsWith(z.Bounds))
                     {
-                        Ball_y = -Ball_y;
+                        DatosJuego.y_move = -DatosJuego.y_move;
                         z.BackgroundImage = Properties.Resources.bloque_amarillo_roto;
                         z.Tag = "specialblock";
                     }
@@ -187,7 +180,7 @@ namespace IArkanoid
                 {
                     if (Ball.Bounds.IntersectsWith(z.Bounds))
                     {
-                        Ball_y = -Ball_y;
+                        DatosJuego.y_move = -DatosJuego.y_move;
                         z.BackgroundImage = Properties.Resources.bloque_gris_roto;
                         z.Tag = "specialblock";
                     }
@@ -195,36 +188,37 @@ namespace IArkanoid
             }
         }
         
-        private void Ball_movement()
+        private void Ball_movement() //movimiento de pelota
         {
-            Ball.Left += Ball_x;
-            Ball.Top += Ball_y;
+            Ball.Left += DatosJuego.x_move;
+            Ball.Top += DatosJuego.y_move;
              
             if (Ball.Left + Ball.Width > ClientSize.Width || Ball.Left < 0)
             {
-                Ball_x = -Ball_x;
+                DatosJuego.x_move = -DatosJuego.x_move;
             }
 
             if (Ball.Top < 0 || Ball.Bounds.IntersectsWith(lblLives.Bounds) || 
                 Ball.Bounds.IntersectsWith(ptbLogo.Bounds) || Ball.Bounds.IntersectsWith(lblScore.Bounds))
             {
-                Ball_y = -Ball_y;
+                DatosJuego.y_move = -DatosJuego.y_move;
             }
 
             if (Ball.Bounds.IntersectsWith(player.Bounds))
             {
-                Ball_y = -Ball_y;
+                DatosJuego.y_move = -DatosJuego.y_move;
             }
         }
 
         private void NewGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) //probando
+            if (e.KeyCode == Keys.Enter) // Se tiene que presionar enter para que inicie el juego
             {
-                JuegoIniciado.startgame = true;
+                DatosJuego.startgame = true;
+                Controls.Remove(lblEnter);
             }
 
-            if (JuegoIniciado.startgame == true)
+            if (DatosJuego.startgame == true) // El player se mueve con las teclas Right y Left
             {
                 if (e.KeyCode == Keys.Left && player.Left > 0)
                 {
@@ -236,8 +230,9 @@ namespace IArkanoid
                     player.Left += 8;
                 }
             }
-            else
-            {
+            else  // Si no se ha presionado la tecla enter la pelota se movera junto al player con las teclas
+            {     // Right y Left
+                
                 if (e.KeyCode == Keys.Left && player.Left > 0)
                     {
                         player.Left -= 8;
@@ -255,9 +250,9 @@ namespace IArkanoid
         private void timer1_Tick(object sender, EventArgs e)
         {
             scorecalculation();
-            blindedblock();
+            Blindedblock();
             Juegoterminado();
-            if (JuegoIniciado.startgame == true)
+            if (DatosJuego.startgame == true)
             {
                 Ball_movement();
             }
