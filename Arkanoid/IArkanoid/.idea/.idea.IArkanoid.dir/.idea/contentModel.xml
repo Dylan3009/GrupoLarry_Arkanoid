@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Dell\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Dell\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Dell\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid" t="IncludeRecursive">
+      <e p="App.config" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Common Classes" t="Include">
+        <e p="CustomPicturebox.cs" t="Include" />
+        <e p="DatosJuego.cs" t="Include" />
+        <e p="Lives.cs" t="Include" />
+        <e p="usuar.cs" t="Include" />
+      </e>
+      <e p="DataBase Connection" t="Include">
+        <e p="Connection.cs" t="Include" />
+        <e p="usuarDAO.cs" t="Include" />
+      </e>
+      <e p="Form1.cs" t="Include" />
+      <e p="Form1.Designer.cs" t="Include" />
+      <e p="Form1.resx" t="Include" />
+      <e p="IArkanoid.csproj" t="IncludeRecursive" />
+      <e p="NewGame.cs" t="Include" />
+      <e p="NewGame.Designer.cs" t="Include" />
+      <e p="NewGame.resx" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="Register.cs" t="Include" />
+      <e p="Register.Designer.cs" t="Include" />
+      <e p="Register.resx" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="bloque_amarillo.PNG" t="Include" />
+        <e p="bloque_amarillo_roto.PNG" t="Include" />
+        <e p="bloque_azul.PNG" t="Include" />
+        <e p="bloque_azul_roto.PNG" t="Include" />
+        <e p="bloque_cafe.PNG" t="Include" />
+        <e p="bloque_cafe_roto.PNG" t="Include" />
+        <e p="bloque_celeste.PNG" t="Include" />
+        <e p="bloque_celeste_roto.PNG" t="Include" />
+        <e p="bloque_gris.PNG" t="Include" />
+        <e p="bloque_gris_roto.PNG" t="Include" />
+        <e p="bloque_morado.PNG" t="Include" />
+        <e p="bloque_morado_roto.PNG" t="Include" />
+        <e p="bloque_naranja.PNG" t="Include" />
+        <e p="bloque_naranja_roto.PNG" t="Include" />
+        <e p="bloque_rojo.PNG" t="Include" />
+        <e p="bloque_rojo_roto.PNG" t="Include" />
+        <e p="bloque_verde.PNG" t="Include" />
+        <e p="bloque_verde_roto.PNG" t="Include" />
+        <e p="bloque_verdeoscuro.PNG" t="Include" />
+        <e p="bloque_verdeoscuro_roto.PNG" t="Include" />
+        <e p="circle_cropped.png" t="Include" />
+        <e p="corazon.PNG" t="Include" />
+        <e p="player.PNG" t="Include" />
+      </e>
+      <e p="Scores.cs" t="Include" />
+      <e p="Scores.Designer.cs" t="Include" />
+      <e p="Scores.resx" t="Include" />
+    </e>
+  </component>
+</project>
