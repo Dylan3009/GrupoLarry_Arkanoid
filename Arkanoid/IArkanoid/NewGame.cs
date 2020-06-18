@@ -12,7 +12,7 @@ namespace IArkanoid
         public NewGame(string username)
         {
             InitializeComponent();
-            Height = ClientSize.Height;
+            Height = ClientSize.Height; // Inicializando tamano de la ventana
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
             prueba = username;
