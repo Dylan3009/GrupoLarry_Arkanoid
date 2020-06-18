@@ -9,7 +9,7 @@ namespace IArkanoid
         
         public static List<usuar> getLista()
         {
-            string sql = "select * from usuar order by score desc";
+            string sql = "select * from usuar order by score desc limit 10";
 
             DataTable dt = Connection.realizarConsulta(sql);
 

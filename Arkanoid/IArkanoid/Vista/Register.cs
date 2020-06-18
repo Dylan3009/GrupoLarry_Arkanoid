@@ -33,7 +33,8 @@ namespace IArkanoid
                     {
                         usuarDAO.crearNuevo(textBox1.Text, 0);
 
-                        MessageBox.Show("Se ha registrado jugador");
+                        MessageBox.Show("Se ha registrado jugador","ARKANOID",MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
 
                         NewGame ventana = new NewGame(textBox1.Text);
                         ventana.Show();

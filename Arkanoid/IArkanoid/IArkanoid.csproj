@@ -91,48 +91,42 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Common Classes\CustomPicturebox.cs" />
-        <Compile Include="Common Classes\DatosJuego.cs" />
-        <Compile Include="Common Classes\Lives.cs" />
-        <Compile Include="Common Classes\usuar.cs" />
-        <Compile Include="DataBase Connection\Connection.cs" />
-        <Compile Include="DataBase Connection\usuarDAO.cs" />
-        <Compile Include="EmptyTextBoxException.cs" />
-        <Compile Include="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Form1.Designer.cs">
-            <DependentUpon>Form1.cs</DependentUpon>
-        </Compile>
-        <Compile Include="NewGame.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="NewGame.Designer.cs">
-          <DependentUpon>NewGame.cs</DependentUpon>
-        </Compile>
-        <Compile Include="NoRemainingLivesException.cs" />
-        <Compile Include="OtherKeyException.cs" />
+        <Compile Include="Controlador\Connection.cs" />
+        <Compile Include="Controlador\DatosJuego.cs" />
+        <Compile Include="Controlador\EmptyTextBoxException.cs" />
+        <Compile Include="Controlador\Lives.cs" />
+        <Compile Include="Controlador\NoRemainingLivesException.cs" />
+        <Compile Include="Controlador\OtherKeyException.cs" />
+        <Compile Include="Controlador\TooManyCharactersException.cs" />
+        <Compile Include="Controlador\usuar.cs" />
+        <Compile Include="Controlador\usuarDAO.cs" />
+        <Compile Include="Modelo\CustomPicturebox.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Register.cs">
+        <Compile Include="Vista\Form1.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="Register.Designer.cs">
+        <Compile Include="Vista\Form1.Designer.cs">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Vista\NewGame.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Vista\NewGame.Designer.cs">
+          <DependentUpon>NewGame.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Vista\Register.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Vista\Register.Designer.cs">
           <DependentUpon>Register.cs</DependentUpon>
         </Compile>
-        <Compile Include="Scores.cs">
+        <Compile Include="Vista\Scores.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="Scores.Designer.cs">
+        <Compile Include="Vista\Scores.Designer.cs">
           <DependentUpon>Scores.cs</DependentUpon>
         </Compile>
-        <Compile Include="TooManyCharactersException.cs" />
-        <EmbeddedResource Include="Form1.resx">
-          <DependentUpon>Form1.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="NewGame.resx">
-          <DependentUpon>NewGame.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -142,10 +136,16 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="Register.resx">
+        <EmbeddedResource Include="Vista\Form1.resx">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\NewGame.resx">
+          <DependentUpon>NewGame.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\Register.resx">
           <DependentUpon>Register.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Scores.resx">
+        <EmbeddedResource Include="Vista\Scores.resx">
           <DependentUpon>Scores.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
@@ -186,11 +186,6 @@
       <Content Include="Resources\circle_cropped.png" />
       <Content Include="Resources\corazon.PNG" />
       <Content Include="Resources\player.PNG" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Controlador" />
-      <Folder Include="Modelo" />
-      <Folder Include="Vista" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -132,7 +132,8 @@ namespace IArkanoid
                             }
                             catch (NoRemainingLivesException ex)
                             {
-                                MessageBox.Show(ex.Message);
+                                MessageBox.Show(ex.Message,"ARKANOID",MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
                             }
                             usuarDAO.actualizarpuntaje(DatosJuego.score, prueba); // se almecana el puntaje en la base 
                             Application.Exit();                                   // de datos
@@ -141,13 +142,13 @@ namespace IArkanoid
                 }
         }
         
-        private void scorecalculation() // calculando el puntaje
+        private void Scorecalculation() // calculando el puntaje
         {
             foreach (Control x in this.Controls)
             {
-                if (x is CustomPicturebox && x.Tag == "block")
-                {
-                    if (Ball.Bounds.IntersectsWith(x.Bounds))
+                if (x is CustomPicturebox && x.Tag == "block")    // Si el tag del bloque con el que la pelota
+                {                                                 // colisiona es: "block" el score se incrementa en 1
+                    if (Ball.Bounds.IntersectsWith(x.Bounds))     // y el bloque se elimina de controls
                     {
                         Controls.Remove(x);
                         DatosJuego.y_move = -DatosJuego.y_move;
@@ -157,9 +158,9 @@ namespace IArkanoid
                 }
                 else
                 {
-                    if (x is PictureBox && x.Tag == "specialblock")
-                    {
-                        if (Ball.Bounds.IntersectsWith(x.Bounds))
+                    if (x is PictureBox && x.Tag == "specialblock") // Si el tag del bloque con el que la pelota 
+                    {                                               // colisiona es: "specialblock" el score se 
+                        if (Ball.Bounds.IntersectsWith(x.Bounds))   // incrementa en 3 y el bloque se elimina de controls
                         {
                             Controls.Remove(x);
                             DatosJuego.y_move = -DatosJuego.y_move;
@@ -175,8 +176,8 @@ namespace IArkanoid
         {
             foreach (Control z in this.Controls)
             {
-                if (z is CustomPicturebox && z.Tag == "yellowblinded")
-                {
+                if (z is CustomPicturebox && z.Tag == "yellowblinded")  
+                {                                                      
                     if (Ball.Bounds.IntersectsWith(z.Bounds))
                     {
                         DatosJuego.y_move = -DatosJuego.y_move;
@@ -225,8 +226,8 @@ namespace IArkanoid
            {
                switch (e.KeyCode)
                {
-                   case Keys.Enter:
-                       DatosJuego.startgame = true;
+                   case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia a de 
+                       DatosJuego.startgame = true;    // valor a true y el juego inicia
                        Controls.Remove(lblEnter);
                        break;
                    case Keys.Right:
@@ -274,7 +275,7 @@ namespace IArkanoid
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            scorecalculation();
+            Scorecalculation();
             Blindedblock();
             Juegoterminado();
             if (DatosJuego.startgame == true)
