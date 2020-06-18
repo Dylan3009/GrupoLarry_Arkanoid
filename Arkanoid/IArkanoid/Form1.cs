@@ -30,8 +30,11 @@ namespace IArkanoid
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            NewGame ventana = new NewGame();
-            ventana.Show();
+            Register windows = new Register();
+            windows.Show();
+
+            // NewGame ventana = new NewGame();
+           // ventana.Show();
         }
     }
 }

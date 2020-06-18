@@ -35,23 +35,13 @@ namespace IArkanoid
             Connection.realizarAccion(sql);
         }
         
-        public static void actualizarpuntaje(int score, string username)
+        public static void actualizarpuntaje(int scores, string username)
         {
             string sql = String.Format(
                 "update usuar set score={0} where username='{1}';",
-                score, username);
+                scores, username);
             
             Connection.realizarAccion(sql);
         }
-        
-        public static void eliminar(string username)
-        {
-            string sql = String.Format(
-                "delete from usuar where username ='{0}'; ",
-                username);
-            
-            Connection.realizarAccion(sql);
-        }
-        
     }
 }

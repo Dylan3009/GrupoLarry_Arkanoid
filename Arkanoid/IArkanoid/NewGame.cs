@@ -8,13 +8,15 @@ namespace IArkanoid
     {
     
         private CustomPicturebox[,] cpb;
+        private string prueba;
     
-        public NewGame()
+        public NewGame(string username)
         {
             InitializeComponent();
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
+            prueba = username;
         }
         
         private void NewGame_Load(object sender, EventArgs e)
@@ -104,6 +106,7 @@ namespace IArkanoid
             {
                 timer1.Stop();
                 MessageBox.Show("Felicidades!", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                usuarDAO.actualizarpuntaje(DatosJuego.score,prueba);
                 Application.Exit();
             }
 
@@ -126,6 +129,8 @@ namespace IArkanoid
                         Controls.Remove(heart1);
                         timer1.Stop();
                         MessageBox.Show("Game Over", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(prueba);
+                        usuarDAO.actualizarpuntaje(DatosJuego.score,prueba);
                         Application.Exit();
                         break;
                 }
