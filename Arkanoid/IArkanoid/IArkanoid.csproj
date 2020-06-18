@@ -110,6 +110,8 @@
         <Compile Include="NewGame.Designer.cs">
           <DependentUpon>NewGame.cs</DependentUpon>
         </Compile>
+        <Compile Include="NoRemainingLivesException.cs" />
+        <Compile Include="OtherKeyException.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Register.cs">
@@ -124,6 +126,7 @@
         <Compile Include="Scores.Designer.cs">
           <DependentUpon>Scores.cs</DependentUpon>
         </Compile>
+        <Compile Include="TooManyCharactersException.cs" />
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
         </EmbeddedResource>
@@ -183,6 +186,11 @@
       <Content Include="Resources\circle_cropped.png" />
       <Content Include="Resources\corazon.PNG" />
       <Content Include="Resources\player.PNG" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Controlador" />
+      <Folder Include="Modelo" />
+      <Folder Include="Vista" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

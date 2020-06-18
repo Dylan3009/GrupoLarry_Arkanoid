@@ -16,6 +16,12 @@ namespace IArkanoid
         {
             try
             {
+
+                if (textBox1.Text.Length > 15)
+                {
+                    throw new TooManyCharactersException("El username es demasiado largo.");
+                }
+
                 if (textBox1.Text.Equals(""))
                 {
                     //MessageBox.Show("No dejar campos vacios");
@@ -43,6 +49,11 @@ namespace IArkanoid
             {
                 MessageBox.Show(s.Message);
             }
+            catch (TooManyCharactersException x)
+            {
+                MessageBox.Show(x.Message, "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+        
     }
 }

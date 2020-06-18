@@ -58,41 +58,37 @@ namespace IArkanoid
                     //posicion de left, y posicion de top
                     cpb[i, j].Left = j * pbWidth;
                     cpb[i, j].Top = (i * pbHeight) + 60;
-
-                    if (i == 0)
+                    
+                    // Poniendole imagen y tag dependiendo de la fila
+                    switch (i)
                     {
-                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_gris;
-                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "greyblinded";
-                    }
-
-                    if (i == 1)
-                    {
-                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_rojo;
-                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "block";
+                        case 0:
+                            cpb[i, j].BackgroundImage = Properties.Resources.bloque_gris;
+                            cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                            cpb[i, j].Tag = "greyblinded";
+                            break;
+                        case 1:
+                            cpb[i, j].BackgroundImage = Properties.Resources.bloque_rojo;
+                            cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                            cpb[i, j].Tag = "block";
+                            break;
+                        case 2:
+                            cpb[i, j].BackgroundImage = Properties.Resources.bloque_azul;
+                            cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                            cpb[i, j].Tag = "block";
+                            break;
+                        case 3:
+                            cpb[i, j].BackgroundImage = Properties.Resources.bloque_verde;
+                            cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                            cpb[i, j].Tag = "block";
+                            break;
+                        case 4:
+                            cpb[i, j].BackgroundImage = Properties.Resources.bloque_amarillo;
+                            cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                            cpb[i, j].Tag = "yellowblinded";
+                            break;
                     }
                     
-                    if (i == 2)
-                    {
-                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_azul;
-                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "block";
-                    }
-                    
-                    if (i == 3)
-                    {
-                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_verde;
-                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "block";
-                    }
-                    
-                    if (i == 4)
-                    {
-                        cpb[i, j].BackgroundImage = Properties.Resources.bloque_amarillo;
-                        cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                        cpb[i, j].Tag = "yellowblinded";
-                    }
                     Controls.Add(cpb[i, j]);
                 }
             }
@@ -104,34 +100,45 @@ namespace IArkanoid
             {
                 timer1.Stop();
                 MessageBox.Show("Felicidades!", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                usuarDAO.actualizarpuntaje(DatosJuego.score,prueba);
+                usuarDAO.actualizarpuntaje(DatosJuego.score,prueba); // Se almacena el puntaje en la base de datos
                 Application.Exit();
             }
-
+            
+            
             if (Ball.Top + Ball.Height > ClientSize.Height) // verificando si la pelota toco el fondo 
-            {
-                switch (Lives.live) //verificando la cantidad de vidas
                 {
-                    case 3:
-                        Lives.live--;
-                        Controls.Remove(heart3);
-                        DatosJuego.y_move = -DatosJuego.y_move;
-                        break;
-                    case 2:
-                        Lives.live--;
-                        Controls.Remove(heart2);
-                        DatosJuego.y_move = -DatosJuego.y_move;
-                        break;
-                    case 1:
-                        Lives.live--;
-                        Controls.Remove(heart1);
-                        timer1.Stop();
-                        MessageBox.Show("Game Over", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        usuarDAO.actualizarpuntaje(DatosJuego.score,prueba);
-                        Application.Exit();
-                        break;
+                    switch (Lives.live) //verificando la cantidad de vidas
+                    {
+                        case 3:
+                            Lives.live--;
+                            Controls.Remove(heart3);
+                            DatosJuego.y_move = -DatosJuego.y_move;
+                            break;
+                        case 2:
+                            Lives.live--;
+                            Controls.Remove(heart2);
+                            DatosJuego.y_move = -DatosJuego.y_move;
+                            break;
+                        case 1:
+                            try
+                            {
+                                Lives.live--;
+                                Controls.Remove(heart1);
+                                timer1.Stop();
+                                if (Lives.live == 0)
+                                {
+                                    throw new NoRemainingLivesException("Game Over");
+                                }
+                            }
+                            catch (NoRemainingLivesException ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                            usuarDAO.actualizarpuntaje(DatosJuego.score, prueba); // se almecana el puntaje en la base 
+                            Application.Exit();                                   // de datos
+                            break;
+                    }
                 }
-            }
         }
         
         private void scorecalculation() // calculando el puntaje
@@ -214,13 +221,29 @@ namespace IArkanoid
 
         private void NewGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) // Se tiene que presionar enter para que inicie el juego
-            {
-                DatosJuego.startgame = true;
-                Controls.Remove(lblEnter);
-            }
+            try
+           {
+               switch (e.KeyCode)
+               {
+                   case Keys.Enter:
+                       DatosJuego.startgame = true;
+                       Controls.Remove(lblEnter);
+                       break;
+                   case Keys.Right:
+                       break;
+                   case Keys.Left:
+                       break;
+                   default:
+                       throw new OtherKeyException("Presiona Enter para iniciar el juego.");
+                       break;
+               }
+           }
+           catch (OtherKeyException o)
+           {
+               MessageBox.Show(o.Message,"ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Information);
+           }
 
-            if (DatosJuego.startgame == true) // El player se mueve con las teclas Right y Left
+           if (DatosJuego.startgame == true) // El player se mueve con las teclas Right y Left
             {
                 if (e.KeyCode == Keys.Left && player.Left > 0)
                 {
