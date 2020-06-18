@@ -25,12 +25,12 @@ namespace IArkanoid
             return lista;
         }
         
-        public static void crearNuevo(string username)
+        public static void crearNuevo(string username, int scorenew)
         {
             string sql = String.Format(
-                "insert into usuar(username) " +
-                "values('{0}');",
-                username);
+                "insert into usuar(username, score) " +
+                "values('{0}', {1});",
+                username, scorenew);
             
             Connection.realizarAccion(sql);
         }

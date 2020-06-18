@@ -1,5 +1,4 @@
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\IArkanoid.exe.config
-C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\IArkanoid.exe
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\bin\Debug\IArkanoid.pdb
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csprojAssemblyReference.cache
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Properties.Resources.resources
@@ -101,3 +100,4 @@ C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid
 C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.NewGame.resources
 C:\Users\renej\Desktop\POO\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.Register.resources
+C:\Users\dylan\Desktop\Programar\Arkanoid\GrupoLarry_Arkanoid\Arkanoid\IArkanoid\obj\Debug\IArkanoid.csproj.CoreCompileInputs.cache

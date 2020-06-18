@@ -6,7 +6,6 @@ namespace IArkanoid
 {
     public partial class NewGame : Form
     {
-    
         private CustomPicturebox[,] cpb;
         private string prueba;
     
@@ -94,7 +93,6 @@ namespace IArkanoid
                         cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
                         cpb[i, j].Tag = "yellowblinded";
                     }
-
                     Controls.Add(cpb[i, j]);
                 }
             }
@@ -129,7 +127,6 @@ namespace IArkanoid
                         Controls.Remove(heart1);
                         timer1.Stop();
                         MessageBox.Show("Game Over", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MessageBox.Show(prueba);
                         usuarDAO.actualizarpuntaje(DatosJuego.score,prueba);
                         Application.Exit();
                         break;
@@ -227,12 +224,12 @@ namespace IArkanoid
             {
                 if (e.KeyCode == Keys.Left && player.Left > 0)
                 {
-                    player.Left -= 8;
+                    player.Left -= 11;
                 }
 
                 if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) 
                 {
-                    player.Left += 8;
+                    player.Left += 11;
                 }
             }
             else  // Si no se ha presionado la tecla enter la pelota se movera junto al player con las teclas

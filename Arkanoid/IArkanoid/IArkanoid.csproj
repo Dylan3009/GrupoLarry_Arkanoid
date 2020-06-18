@@ -97,6 +97,7 @@
         <Compile Include="Common Classes\usuar.cs" />
         <Compile Include="DataBase Connection\Connection.cs" />
         <Compile Include="DataBase Connection\usuarDAO.cs" />
+        <Compile Include="EmptyTextBoxException.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>
         </Compile>

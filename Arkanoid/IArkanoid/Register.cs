@@ -9,41 +9,40 @@ namespace IArkanoid
         
         public Register()
         {
-            
             InitializeComponent();
         }
   
         private void button1_Click(object sender, EventArgs e)
         {
-        
-            if (textBox1.Text.Equals(""))
+            try
             {
-                MessageBox.Show("No dejar campos vacios");
+                if (textBox1.Text.Equals(""))
+                {
+                    //MessageBox.Show("No dejar campos vacios");
+                    throw new EmptyTextBoxException("Por favor introduzca un nombre de usuario");
+                }
+                else
+                {
+                    try
+                    {
+                        usuarDAO.crearNuevo(textBox1.Text, 0);
+
+                        MessageBox.Show("Se ha registrado jugador");
+
+                        NewGame ventana = new NewGame(textBox1.Text);
+                        ventana.Show();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
+                }
             }
-            else
+            catch (EmptyTextBoxException s)
             {
-                try
-                {
-                  //Connection.realizarAccion($"insert into usuar(username) values(" +
-                  //                      $"'{textBox1.Text}')");
-                  usuarDAO.crearNuevo(textBox1.Text);
-                  
-
-                    MessageBox.Show("Se ha registrado jugador");
-                    
-                    NewGame ventana = new NewGame(textBox1.Text);
-                    ventana.Show();
-                    this.Close();
-                    
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ha ocurrido un error");
-                }
+                MessageBox.Show(s.Message);
             }
         }
-
-       
     }
 }

@@ -32,9 +32,6 @@ namespace IArkanoid
         {
             Register windows = new Register();
             windows.Show();
-
-            // NewGame ventana = new NewGame();
-           // ventana.Show();
         }
     }
 }
