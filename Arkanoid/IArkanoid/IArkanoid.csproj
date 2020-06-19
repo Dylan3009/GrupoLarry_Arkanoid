@@ -94,6 +94,7 @@
         <Compile Include="Controlador\Connection.cs" />
         <Compile Include="Controlador\DatosJuego.cs" />
         <Compile Include="Controlador\EmptyTextBoxException.cs" />
+        <Compile Include="Controlador\HasNotPlayedGameException.cs" />
         <Compile Include="Controlador\Lives.cs" />
         <Compile Include="Controlador\NoRemainingLivesException.cs" />
         <Compile Include="Controlador\OtherKeyException.cs" />

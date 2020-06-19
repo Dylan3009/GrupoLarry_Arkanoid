@@ -13,7 +13,16 @@ namespace IArkanoid
 
         private void Scores_Load(object sender, EventArgs e)
         {
-            actualizarcontroles();
+            try
+            {
+                actualizarcontroles();
+            }
+            catch (HasNotPlayedGameException s)
+            {
+                MessageBox.Show(s.Message);
+                throw;
+            }
+            
         }
         
         private void actualizarcontroles() // llenando el Data Grid View

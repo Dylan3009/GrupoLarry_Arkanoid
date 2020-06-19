@@ -37,39 +37,40 @@ namespace IArkanoid
                 new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 =
                 new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRankings = new System.Windows.Forms.Label();
             this.dgvScores = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblrank = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize) (this.dgvScores)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblRankings
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 12);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Impact", 36F,
+            this.tableLayoutPanel1.SetColumnSpan(this.lblRankings, 12);
+            this.lblRankings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblRankings.Font = new System.Drawing.Font("Impact", 36F,
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(947, 136);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "RANKINGS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRankings.ForeColor = System.Drawing.Color.White;
+            this.lblRankings.Location = new System.Drawing.Point(2, 0);
+            this.lblRankings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRankings.Name = "lblRankings";
+            this.lblRankings.Size = new System.Drawing.Size(830, 102);
+            this.lblRankings.TabIndex = 0;
+            this.lblRankings.Text = "RANKINGS";
+            this.lblRankings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvScores
             // 
@@ -91,8 +92,8 @@ namespace IArkanoid
             this.dgvScores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvScores.EnableHeadersVisualStyles = false;
             this.dgvScores.GridColor = System.Drawing.Color.Cyan;
-            this.dgvScores.Location = new System.Drawing.Point(193, 199);
-            this.dgvScores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvScores.Location = new System.Drawing.Point(168, 149);
+            this.dgvScores.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvScores.Name = "dgvScores";
             this.dgvScores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -115,7 +116,7 @@ namespace IArkanoid
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvScores.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tableLayoutPanel1.SetRowSpan(this.dgvScores, 10);
-            this.dgvScores.Size = new System.Drawing.Size(757, 582);
+            this.dgvScores.Size = new System.Drawing.Size(664, 434);
             this.dgvScores.TabIndex = 1;
             // 
             // btnRegresar
@@ -133,157 +134,168 @@ namespace IArkanoid
             this.btnRegresar.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(331, 789);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegresar.Location = new System.Drawing.Point(288, 589);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(270, 89);
+            this.btnRegresar.Size = new System.Drawing.Size(236, 69);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // label2
+            // lblrank
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lblrank.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblrank.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 59);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "RANK";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblrank.ForeColor = System.Drawing.Color.White;
+            this.lblrank.Location = new System.Drawing.Point(2, 102);
+            this.lblrank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblrank.Name = "lblrank";
+            this.lblrank.Size = new System.Drawing.Size(162, 44);
+            this.lblrank.TabIndex = 3;
+            this.lblrank.Text = "RANK";
+            this.lblrank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lbl1
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 59);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "1";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1.ForeColor = System.Drawing.Color.White;
+            this.lbl1.Location = new System.Drawing.Point(2, 146);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(162, 44);
+            this.lbl1.TabIndex = 4;
+            this.lbl1.Text = "1";
+            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lbl2
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 254);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 59);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "2";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl2.ForeColor = System.Drawing.Color.White;
+            this.lbl2.Location = new System.Drawing.Point(2, 190);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(162, 44);
+            this.lbl2.TabIndex = 5;
+            this.lbl2.Text = "2";
+            this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lbl3
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 313);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 59);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "3";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl3.ForeColor = System.Drawing.Color.White;
+            this.lbl3.Location = new System.Drawing.Point(2, 234);
+            this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(162, 44);
+            this.lbl3.TabIndex = 6;
+            this.lbl3.Text = "3";
+            this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // lbl10
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 726);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 59);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "10";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl10.ForeColor = System.Drawing.Color.White;
+            this.lbl10.Location = new System.Drawing.Point(2, 542);
+            this.lbl10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(162, 44);
+            this.lbl10.TabIndex = 7;
+            this.lbl10.Text = "10";
+            this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // lbl9
             // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 667);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 59);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "9";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl9.ForeColor = System.Drawing.Color.White;
+            this.lbl9.Location = new System.Drawing.Point(2, 498);
+            this.lbl9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(162, 44);
+            this.lbl9.TabIndex = 8;
+            this.lbl9.Text = "9";
+            this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // lbl4
             // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 372);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 59);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "4";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl4.ForeColor = System.Drawing.Color.White;
+            this.lbl4.Location = new System.Drawing.Point(2, 278);
+            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(162, 44);
+            this.lbl4.TabIndex = 9;
+            this.lbl4.Text = "4";
+            this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // lbl6
             // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 490);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 59);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "6";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl6.ForeColor = System.Drawing.Color.White;
+            this.lbl6.Location = new System.Drawing.Point(2, 366);
+            this.lbl6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(162, 44);
+            this.lbl6.TabIndex = 10;
+            this.lbl6.Text = "6";
+            this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // lbl5
             // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(3, 431);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(184, 59);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "5";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl5.ForeColor = System.Drawing.Color.White;
+            this.lbl5.Location = new System.Drawing.Point(2, 322);
+            this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(162, 44);
+            this.lbl5.TabIndex = 11;
+            this.lbl5.Text = "5";
+            this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // lbl8
             // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, 608);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(184, 59);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "8";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl8.ForeColor = System.Drawing.Color.White;
+            this.lbl8.Location = new System.Drawing.Point(2, 454);
+            this.lbl8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(162, 44);
+            this.lbl8.TabIndex = 12;
+            this.lbl8.Text = "8";
+            this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // lbl7
             // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
+            this.lbl7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(3, 549);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(184, 59);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "7";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl7.ForeColor = System.Drawing.Color.White;
+            this.lbl7.Location = new System.Drawing.Point(2, 410);
+            this.lbl7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(162, 44);
+            this.lbl7.TabIndex = 13;
+            this.lbl7.Text = "7";
+            this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -313,23 +325,23 @@ namespace IArkanoid
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblRankings, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl10, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.lbl9, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.lbl8, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.lbl7, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lblrank, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl6, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lbl5, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl3, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl4, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dgvScores, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 3, 12);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(
@@ -358,20 +370,20 @@ namespace IArkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.29638F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 882);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // Scores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
                 ((int) (((byte) (64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(953, 882);
+            this.ClientSize = new System.Drawing.Size(834, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Scores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scores";
@@ -384,20 +396,20 @@ namespace IArkanoid
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.DataGridView dgvScores;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lblrank;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.Label lbl10;
+        private System.Windows.Forms.Label lbl9;
+        private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.Label lbl5;
+        private System.Windows.Forms.Label lbl8;
+        private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Label lblRankings;
     }
 }

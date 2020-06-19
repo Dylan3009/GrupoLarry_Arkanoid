@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Media;
 using System.Windows.Forms;
 
 namespace IArkanoid
@@ -30,8 +29,8 @@ namespace IArkanoid
             heart2.Left = lblLives.Left + 160;
             heart3.Top = lblLives.Top + 10;
             heart3.Left = lblLives.Left + 210;
-            lblEnter.Top = ptbLogo.Top + 500;
-            lblEnter.Left = ptbLogo.Left + 450;
+            lblEnter.Top = picLogo.Top + 500;
+            lblEnter.Left = picLogo.Left + 450;
             
             Loadtiles();
         }
@@ -147,8 +146,10 @@ namespace IArkanoid
             foreach (Control x in this.Controls)
             {
                 if (x is CustomPicturebox && x.Tag == "block")    // Si el tag del bloque con el que la pelota
-                {                                                 // colisiona es: "block" el score se incrementa en 1
-                    if (Ball.Bounds.IntersectsWith(x.Bounds))     // y el bloque se elimina de controls
+                                                                  // colisiona es: "block" el score se incrementa en 1
+                                                                  // y el bloque se elimina de controls
+                {                                                 
+                    if (Ball.Bounds.IntersectsWith(x.Bounds))     
                     {
                         Controls.Remove(x);
                         DatosJuego.y_move = -DatosJuego.y_move;
@@ -158,9 +159,11 @@ namespace IArkanoid
                 }
                 else
                 {
-                    if (x is PictureBox && x.Tag == "specialblock") // Si el tag del bloque con el que la pelota 
-                    {                                               // colisiona es: "specialblock" el score se 
-                        if (Ball.Bounds.IntersectsWith(x.Bounds))   // incrementa en 3 y el bloque se elimina de controls
+                    if (x is PictureBox && x.Tag == "specialblock") // Si el tag del bloque con el que la pelota
+                                                                    // colisiona es: "specialblock" el score se
+                                                                    //incrementa en 3 y el bloque se elimina de controls
+                    {                                              
+                        if (Ball.Bounds.IntersectsWith(x.Bounds))   
                         {
                             Controls.Remove(x);
                             DatosJuego.y_move = -DatosJuego.y_move;
@@ -209,7 +212,7 @@ namespace IArkanoid
             }
 
             if (Ball.Top < 0 || Ball.Bounds.IntersectsWith(lblLives.Bounds) || 
-                Ball.Bounds.IntersectsWith(ptbLogo.Bounds) || Ball.Bounds.IntersectsWith(lblScore.Bounds))
+                Ball.Bounds.IntersectsWith(picLogo.Bounds) || Ball.Bounds.IntersectsWith(lblScore.Bounds))
             {
                 DatosJuego.y_move = -DatosJuego.y_move;
             }
@@ -226,8 +229,9 @@ namespace IArkanoid
            {
                switch (e.KeyCode)
                {
-                   case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia a de 
-                       DatosJuego.startgame = true;    // valor a true y el juego inicia
+                   case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia de
+                                                       // valor a true y el juego inicia
+                       DatosJuego.startgame = true;    
                        Controls.Remove(lblEnter);
                        break;
                    case Keys.Right:
@@ -257,7 +261,8 @@ namespace IArkanoid
                 }
             }
             else  // Si no se ha presionado la tecla enter la pelota se movera junto al player con las teclas
-            {     // Right y Left
+                  // Right y Left
+            {     
                 
                 if (e.KeyCode == Keys.Left && player.Left > 0)
                     {

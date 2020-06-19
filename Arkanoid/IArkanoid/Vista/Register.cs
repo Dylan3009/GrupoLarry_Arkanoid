@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace IArkanoid
@@ -12,17 +11,17 @@ namespace IArkanoid
             InitializeComponent();
         }
   
-        private void button1_Click(object sender, EventArgs e)
+        private void btnContinue_Click(object sender, EventArgs e)
         {
             try
             {
 
-                if (textBox1.Text.Length > 15)
+                if (txtUser.Text.Length > 15)
                 {
                     throw new TooManyCharactersException("El username es demasiado largo.");
                 }
 
-                if (textBox1.Text.Equals(""))
+                if (txtUser.Text.Equals(""))
                 {
                     //MessageBox.Show("No dejar campos vacios");
                     throw new EmptyTextBoxException("Por favor introduzca un nombre de usuario");
@@ -31,12 +30,12 @@ namespace IArkanoid
                 {
                     try
                     {
-                        usuarDAO.crearNuevo(textBox1.Text, 0);
+                        usuarDAO.crearNuevo(txtUser.Text, 0);
 
                         MessageBox.Show("Se ha registrado jugador","ARKANOID",MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
 
-                        NewGame ventana = new NewGame(textBox1.Text);
+                        NewGame ventana = new NewGame(txtUser.Text);
                         ventana.Show();
                         this.Close();
                     }
