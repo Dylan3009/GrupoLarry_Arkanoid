@@ -67,13 +67,14 @@ namespace IArkanoid
             this.lblRankings.Location = new System.Drawing.Point(2, 0);
             this.lblRankings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRankings.Name = "lblRankings";
-            this.lblRankings.Size = new System.Drawing.Size(830, 102);
+            this.lblRankings.Size = new System.Drawing.Size(949, 136);
             this.lblRankings.TabIndex = 0;
             this.lblRankings.Text = "RANKINGS";
             this.lblRankings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvScores
             // 
+            this.dgvScores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvScores.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.dgvScores.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -89,14 +90,13 @@ namespace IArkanoid
             this.dgvScores.ColumnHeadersHeightSizeMode =
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dgvScores, 11);
-            this.dgvScores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvScores.EnableHeadersVisualStyles = false;
             this.dgvScores.GridColor = System.Drawing.Color.Cyan;
-            this.dgvScores.Location = new System.Drawing.Point(168, 149);
-            this.dgvScores.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dgvScores.Location = new System.Drawing.Point(372, 195);
+            this.dgvScores.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dgvScores.Name = "dgvScores";
             this.dgvScores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -116,7 +116,7 @@ namespace IArkanoid
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvScores.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tableLayoutPanel1.SetRowSpan(this.dgvScores, 10);
-            this.dgvScores.Size = new System.Drawing.Size(664, 434);
+            this.dgvScores.Size = new System.Drawing.Size(579, 580);
             this.dgvScores.TabIndex = 1;
             // 
             // btnRegresar
@@ -134,10 +134,10 @@ namespace IArkanoid
             this.btnRegresar.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(288, 589);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnRegresar.Location = new System.Drawing.Point(389, 789);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(236, 69);
+            this.btnRegresar.Size = new System.Drawing.Size(213, 88);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -145,154 +145,154 @@ namespace IArkanoid
             // 
             // lblrank
             // 
-            this.lblrank.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblrank.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblrank.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblrank.ForeColor = System.Drawing.Color.White;
-            this.lblrank.Location = new System.Drawing.Point(2, 102);
+            this.lblrank.Location = new System.Drawing.Point(182, 136);
             this.lblrank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblrank.Name = "lblrank";
-            this.lblrank.Size = new System.Drawing.Size(162, 44);
+            this.lblrank.Size = new System.Drawing.Size(186, 55);
             this.lblrank.TabIndex = 3;
             this.lblrank.Text = "RANK";
             this.lblrank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl1
             // 
-            this.lbl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl1.ForeColor = System.Drawing.Color.White;
-            this.lbl1.Location = new System.Drawing.Point(2, 146);
+            this.lbl1.Location = new System.Drawing.Point(182, 191);
             this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(162, 44);
+            this.lbl1.Size = new System.Drawing.Size(186, 63);
             this.lbl1.TabIndex = 4;
             this.lbl1.Text = "1";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl2
             // 
-            this.lbl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl2.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl2.ForeColor = System.Drawing.Color.White;
-            this.lbl2.Location = new System.Drawing.Point(2, 190);
+            this.lbl2.Location = new System.Drawing.Point(182, 254);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(162, 44);
+            this.lbl2.Size = new System.Drawing.Size(186, 59);
             this.lbl2.TabIndex = 5;
             this.lbl2.Text = "2";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl3
             // 
-            this.lbl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl3.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl3.ForeColor = System.Drawing.Color.White;
-            this.lbl3.Location = new System.Drawing.Point(2, 234);
+            this.lbl3.Location = new System.Drawing.Point(182, 313);
             this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(162, 44);
+            this.lbl3.Size = new System.Drawing.Size(186, 59);
             this.lbl3.TabIndex = 6;
             this.lbl3.Text = "3";
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl10
             // 
-            this.lbl10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl10.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl10.ForeColor = System.Drawing.Color.White;
-            this.lbl10.Location = new System.Drawing.Point(2, 542);
+            this.lbl10.Location = new System.Drawing.Point(182, 726);
             this.lbl10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(162, 44);
+            this.lbl10.Size = new System.Drawing.Size(186, 59);
             this.lbl10.TabIndex = 7;
             this.lbl10.Text = "10";
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl9
             // 
-            this.lbl9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl9.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl9.ForeColor = System.Drawing.Color.White;
-            this.lbl9.Location = new System.Drawing.Point(2, 498);
+            this.lbl9.Location = new System.Drawing.Point(182, 667);
             this.lbl9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(162, 44);
+            this.lbl9.Size = new System.Drawing.Size(186, 59);
             this.lbl9.TabIndex = 8;
             this.lbl9.Text = "9";
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl4
             // 
-            this.lbl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl4.ForeColor = System.Drawing.Color.White;
-            this.lbl4.Location = new System.Drawing.Point(2, 278);
+            this.lbl4.Location = new System.Drawing.Point(182, 372);
             this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(162, 44);
+            this.lbl4.Size = new System.Drawing.Size(186, 59);
             this.lbl4.TabIndex = 9;
             this.lbl4.Text = "4";
             this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl6
             // 
-            this.lbl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl6.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl6.ForeColor = System.Drawing.Color.White;
-            this.lbl6.Location = new System.Drawing.Point(2, 366);
+            this.lbl6.Location = new System.Drawing.Point(182, 490);
             this.lbl6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(162, 44);
+            this.lbl6.Size = new System.Drawing.Size(186, 59);
             this.lbl6.TabIndex = 10;
             this.lbl6.Text = "6";
             this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl5
             // 
-            this.lbl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl5.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl5.ForeColor = System.Drawing.Color.White;
-            this.lbl5.Location = new System.Drawing.Point(2, 322);
+            this.lbl5.Location = new System.Drawing.Point(182, 431);
             this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(162, 44);
+            this.lbl5.Size = new System.Drawing.Size(186, 59);
             this.lbl5.TabIndex = 11;
             this.lbl5.Text = "5";
             this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl8
             // 
-            this.lbl8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl8.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl8.ForeColor = System.Drawing.Color.White;
-            this.lbl8.Location = new System.Drawing.Point(2, 454);
+            this.lbl8.Location = new System.Drawing.Point(182, 608);
             this.lbl8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(162, 44);
+            this.lbl8.Size = new System.Drawing.Size(186, 59);
             this.lbl8.TabIndex = 12;
             this.lbl8.Text = "8";
             this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl7
             // 
-            this.lbl7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl7.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl7.ForeColor = System.Drawing.Color.White;
-            this.lbl7.Location = new System.Drawing.Point(2, 410);
+            this.lbl7.Location = new System.Drawing.Point(182, 549);
             this.lbl7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(162, 44);
+            this.lbl7.Size = new System.Drawing.Size(186, 59);
             this.lbl7.TabIndex = 13;
             this.lbl7.Text = "7";
             this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,13 +302,13 @@ namespace IArkanoid
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 12;
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.006F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.82476F));
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9443861F));
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8394544F));
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.049318F));
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
             this.tableLayoutPanel1.ColumnStyles.Add(
@@ -341,15 +341,15 @@ namespace IArkanoid
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 3, 12);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.44457F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.242906F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.150965F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
             this.tableLayoutPanel1.RowStyles.Add(
@@ -370,20 +370,20 @@ namespace IArkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.29638F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 881);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // Scores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
                 ((int) (((byte) (64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(834, 661);
+            this.ClientSize = new System.Drawing.Size(953, 881);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Scores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scores";

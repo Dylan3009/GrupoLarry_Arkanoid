@@ -24,7 +24,6 @@ namespace IArkanoid
             }
             
         }
-        
         private void actualizarcontroles() // llenando el Data Grid View
         {
             // Realizar consulta a la base de datos
@@ -33,12 +32,19 @@ namespace IArkanoid
             // Tabla (data grid view Scores)
             dgvScores.DataSource = null;
             dgvScores.DataSource = lista;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                DataGridViewRow row = dgvScores.Rows[i];
+                row.Height = 50;
+                this.dgvScores.Columns[0].DefaultCellStyle
+                    .Alignment = DataGridViewContentAlignment.MiddleCenter;
+                this.dgvScores.Columns[1].DefaultCellStyle
+                    .Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
         }
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        
     }
 }

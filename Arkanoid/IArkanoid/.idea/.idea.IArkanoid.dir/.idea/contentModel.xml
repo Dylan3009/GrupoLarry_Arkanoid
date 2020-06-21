@@ -3,26 +3,25 @@
   <component name="ContentModelStore">
     <e p="C:\Users\Dell\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Dell\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Dell\Desktop\IArkanoid" t="IncludeRecursive">
+    <e p="C:\Users\Dell\Documents\GitHub\GrupoLarry_Arkanoid\Arkanoid\IArkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
-      <e p="Common Classes" t="Include">
-        <e p="CustomPicturebox.cs" t="Include" />
-        <e p="DatosJuego.cs" t="Include" />
-        <e p="Lives.cs" t="Include" />
-        <e p="usuar.cs" t="Include" />
-      </e>
-      <e p="DataBase Connection" t="Include">
+      <e p="Controlador" t="Include">
         <e p="Connection.cs" t="Include" />
+        <e p="DatosJuego.cs" t="Include" />
+        <e p="EmptyTextBoxException.cs" t="Include" />
+        <e p="HasNotPlayedGameException.cs" t="Include" />
+        <e p="Lives.cs" t="Include" />
+        <e p="NoRemainingLivesException.cs" t="Include" />
+        <e p="OtherKeyException.cs" t="Include" />
+        <e p="TooManyCharactersException.cs" t="Include" />
+        <e p="usuar.cs" t="Include" />
         <e p="usuarDAO.cs" t="Include" />
       </e>
-      <e p="Form1.cs" t="Include" />
-      <e p="Form1.Designer.cs" t="Include" />
-      <e p="Form1.resx" t="Include" />
       <e p="IArkanoid.csproj" t="IncludeRecursive" />
-      <e p="NewGame.cs" t="Include" />
-      <e p="NewGame.Designer.cs" t="Include" />
-      <e p="NewGame.resx" t="Include" />
+      <e p="Modelo" t="Include">
+        <e p="CustomPicturebox.cs" t="Include" />
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
@@ -34,9 +33,6 @@
         <e p="Settings.Designer.cs" t="Include" />
         <e p="Settings.settings" t="Include" />
       </e>
-      <e p="Register.cs" t="Include" />
-      <e p="Register.Designer.cs" t="Include" />
-      <e p="Register.resx" t="Include" />
       <e p="Resources" t="Include">
         <e p="bloque_amarillo.PNG" t="Include" />
         <e p="bloque_amarillo_roto.PNG" t="Include" />
@@ -62,9 +58,20 @@
         <e p="corazon.PNG" t="Include" />
         <e p="player.PNG" t="Include" />
       </e>
-      <e p="Scores.cs" t="Include" />
-      <e p="Scores.Designer.cs" t="Include" />
-      <e p="Scores.resx" t="Include" />
+      <e p="Vista" t="Include">
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="NewGame.cs" t="Include" />
+        <e p="NewGame.Designer.cs" t="Include" />
+        <e p="NewGame.resx" t="Include" />
+        <e p="Register.cs" t="Include" />
+        <e p="Register.Designer.cs" t="Include" />
+        <e p="Register.resx" t="Include" />
+        <e p="Scores.cs" t="Include" />
+        <e p="Scores.Designer.cs" t="Include" />
+        <e p="Scores.resx" t="Include" />
+      </e>
     </e>
   </component>
 </project>
