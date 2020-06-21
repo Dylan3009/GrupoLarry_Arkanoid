@@ -41,13 +41,14 @@ namespace IArkanoid
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Ha ocurrido un error");
+                        MessageBox.Show("Username no disponible","ARKANOID",
+                            MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                 }
             }
             catch (EmptyTextBoxException s)
             {
-                MessageBox.Show(s.Message);
+                MessageBox.Show(s.Message,"ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (TooManyCharactersException x)
             {

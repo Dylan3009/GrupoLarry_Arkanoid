@@ -7,7 +7,7 @@ namespace IArkanoid
     {
         
         public static string CadenaConexion = 
-            "Server=127.0.0.1;Port=2307;User Id=postgres;Password=THEINVISIBLE;Database=bddArkanoid;";
+            "Server=127.0.0.1;Port=5432;User Id=postgres;Password=beto;Database=bddArkanoid;";
         
         public static DataTable realizarConsulta(string sql)
         {

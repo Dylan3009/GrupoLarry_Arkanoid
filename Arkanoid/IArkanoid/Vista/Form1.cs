@@ -20,7 +20,7 @@ namespace IArkanoid
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)

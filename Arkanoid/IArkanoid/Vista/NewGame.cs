@@ -110,16 +110,16 @@ namespace IArkanoid
                     {
                         case 3:
                             Lives.live--;
-                            Controls.Remove(heart3);
-                            DatosJuego.y_move = -DatosJuego.y_move;
+                            Controls.Remove(heart3);                 
+                            DatosJuego.y_move = -DatosJuego.y_move;  
                             break;
                         case 2:
                             Lives.live--;
                             Controls.Remove(heart2);
-                            DatosJuego.y_move = -DatosJuego.y_move;
-                            break;
-                        case 1:
-                            try
+                            DatosJuego.y_move = -DatosJuego.y_move; // si tiene 3 o 2 vidas y la pelota toca el fondo 
+                            break;                                  // se le reducen las vidas pero si solo tiene una
+                        case 1:                                     // vida y la pelota toca el fondo se regresa a la 
+                            try                                     // ventana principal
                             {
                                 Lives.live--;
                                 Controls.Remove(heart1);
@@ -135,7 +135,7 @@ namespace IArkanoid
                                     MessageBoxIcon.Information);
                             }
                             usuarDAO.actualizarpuntaje(DatosJuego.score, prueba); // se almecana el puntaje en la base 
-                            Application.Exit();                                   // de datos
+                            this.Close();                                         // de datos
                             break;
                     }
                 }
@@ -146,10 +146,8 @@ namespace IArkanoid
             foreach (Control x in this.Controls)
             {
                 if (x is CustomPicturebox && x.Tag == "block")    // Si el tag del bloque con el que la pelota
-                                                                  // colisiona es: "block" el score se incrementa en 1
-                                                                  // y el bloque se elimina de controls
-                {                                                 
-                    if (Ball.Bounds.IntersectsWith(x.Bounds))     
+                {                                                 // colisiona es: "block" el score se incrementa en 1
+                    if (Ball.Bounds.IntersectsWith(x.Bounds))     // y el bloque se elimina de controls
                     {
                         Controls.Remove(x);
                         DatosJuego.y_move = -DatosJuego.y_move;
@@ -160,10 +158,8 @@ namespace IArkanoid
                 else
                 {
                     if (x is PictureBox && x.Tag == "specialblock") // Si el tag del bloque con el que la pelota
-                                                                    // colisiona es: "specialblock" el score se
-                                                                    //incrementa en 3 y el bloque se elimina de controls
-                    {                                              
-                        if (Ball.Bounds.IntersectsWith(x.Bounds))   
+                    {                                               // colisiona es: "specialblock" el score se
+                        if (Ball.Bounds.IntersectsWith(x.Bounds))   //incrementa en 3 y el bloque se elimina de controls
                         {
                             Controls.Remove(x);
                             DatosJuego.y_move = -DatosJuego.y_move;
@@ -207,18 +203,18 @@ namespace IArkanoid
             Ball.Top += DatosJuego.y_move;
              
             if (Ball.Left + Ball.Width > ClientSize.Width || Ball.Left < 0)
-            {
-                DatosJuego.x_move = -DatosJuego.x_move;
+            {                                               // si la pelota colisiona con el extremo derecho o izquierdo
+                DatosJuego.x_move = -DatosJuego.x_move;     // de la pantalla se cambia la dirección en x
             }
 
             if (Ball.Top < 0 || Ball.Bounds.IntersectsWith(lblLives.Bounds) || 
                 Ball.Bounds.IntersectsWith(picLogo.Bounds) || Ball.Bounds.IntersectsWith(lblScore.Bounds))
             {
-                DatosJuego.y_move = -DatosJuego.y_move;
-            }
+                DatosJuego.y_move = -DatosJuego.y_move;    // Si la pelota colisiona con los elementos que estan arriba
+            }                                              // se cambia la dirección en y 
 
-            if (Ball.Bounds.IntersectsWith(player.Bounds))
-            {
+            if (Ball.Bounds.IntersectsWith(player.Bounds)) // Si la pelota colisiona con el jugador se cambia la 
+            {                                              // dirección en y
                 DatosJuego.y_move = -DatosJuego.y_move;
             }
         }
@@ -230,8 +226,7 @@ namespace IArkanoid
                switch (e.KeyCode)
                {
                    case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia de
-                                                       // valor a true y el juego inicia
-                       DatosJuego.startgame = true;    
+                       DatosJuego.startgame = true;    // valor a true y el juego inicia
                        Controls.Remove(lblEnter);
                        break;
                    case Keys.Right:
