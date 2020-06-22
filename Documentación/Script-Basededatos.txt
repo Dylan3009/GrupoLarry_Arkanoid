@@ -1,0 +1,17 @@
+-- Table: public.usuar
+
+-- DROP TABLE public.usuar;
+
+CREATE TABLE public.usuar
+(
+  username character varying(25) COLLATE pg_catalog."default" NOT NULL,
+  score integer,
+  CONSTRAINT pk_user PRIMARY KEY (username)
+)
+WITH (
+ OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.usuar
+OWNER to postgres;
