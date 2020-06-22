@@ -24,3 +24,6 @@ Su puntaje aparece en la esquina superior derecha de la ventana del juego.
 
 - Mi nombre aparece en la lista de Top Jugadores, ¿que significa esto?   
 Significa que su puntaje está entre los 10 mejores puntajes.
+___
+## Trello
+https://trello.com/b/0mHAeU9y/arkanoid
