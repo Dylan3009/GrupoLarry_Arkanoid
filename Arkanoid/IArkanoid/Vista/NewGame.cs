@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace IArkanoid
@@ -17,20 +18,31 @@ namespace IArkanoid
             prueba = username;
         }
         
+        PictureBox pcbPlayer = new PictureBox();
+        PictureBox pcbBall = new CustomPicturebox();
+        
         private void NewGame_Load(object sender, EventArgs e)
         {
-            player.Top = (Height - player.Height) - 60;  //posicionando los label Score y Lives también
-            player.Left = (Width - player.Width) - 700;  // el PictureBox con el logo y los Corazones
-            Ball.Top = (Height - Ball.Height) - 100;
-            Ball.Left = (Width - Ball.Width) - 750;
+            pcbPlayer.Image = Properties.Resources.player;         //posicionando los label Score y Lives también
+            pcbPlayer.SizeMode = PictureBoxSizeMode.StretchImage;  // el PictureBox con el logo y los Corazones
+            pcbPlayer.Size = new Size(162,37);
+            pcbPlayer.BackColor = Color.Transparent;
+            pcbPlayer.Top = (Height - pcbPlayer.Height) - 50;
+            pcbPlayer.Left = (Width - pcbPlayer.Width) - 700;
+            pcbBall.Image = Properties.Resources.circle_cropped;
+            pcbBall.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbBall.Size = new Size(30,30);
+            pcbBall.BackColor = Color.Transparent;
+            pcbBall.Top = (pcbPlayer.Top - pcbBall.Height) - 10;
+            pcbBall.Left = pcbPlayer.Left + 65;
             heart1.Top = lblLives.Top + 10;            
             heart1.Left = lblLives.Left + 110;
             heart2.Top = lblLives.Top + 10;
             heart2.Left = lblLives.Left + 160;
             heart3.Top = lblLives.Top + 10;
             heart3.Left = lblLives.Left + 210;
-            lblEnter.Top = picLogo.Top + 500;
-            lblEnter.Left = picLogo.Left + 450;
+            Controls.Add(pcbPlayer);
+            Controls.Add(pcbBall);
             
             Loadtiles();
         }
@@ -104,7 +116,7 @@ namespace IArkanoid
             }
             
             
-            if (Ball.Top + Ball.Height > ClientSize.Height) // verificando si la pelota toco el fondo 
+            if (pcbBall.Top + pcbBall.Height > ClientSize.Height) // verificando si la pelota toco el fondo 
                 {
                     switch (Lives.live) //verificando la cantidad de vidas
                     {
@@ -147,7 +159,7 @@ namespace IArkanoid
             {
                 if (x is CustomPicturebox && x.Tag == "block")    // Si el tag del bloque con el que la pelota
                 {                                                 // colisiona es: "block" el score se incrementa en 1
-                    if (Ball.Bounds.IntersectsWith(x.Bounds))     // y el bloque se elimina de controls
+                    if (pcbBall.Bounds.IntersectsWith(x.Bounds))     // y el bloque se elimina de controls
                     {
                         Controls.Remove(x);
                         DatosJuego.y_move = -DatosJuego.y_move;
@@ -159,7 +171,7 @@ namespace IArkanoid
                 {
                     if (x is PictureBox && x.Tag == "specialblock") // Si el tag del bloque con el que la pelota
                     {                                               // colisiona es: "specialblock" el score se
-                        if (Ball.Bounds.IntersectsWith(x.Bounds))   //incrementa en 3 y el bloque se elimina de controls
+                        if (pcbBall.Bounds.IntersectsWith(x.Bounds))   //incrementa en 3 y el bloque se elimina de controls
                         {
                             Controls.Remove(x);
                             DatosJuego.y_move = -DatosJuego.y_move;
@@ -177,7 +189,7 @@ namespace IArkanoid
             {
                 if (z is CustomPicturebox && z.Tag == "yellowblinded")  
                 {                                                      
-                    if (Ball.Bounds.IntersectsWith(z.Bounds))
+                    if (pcbBall.Bounds.IntersectsWith(z.Bounds))
                     {
                         DatosJuego.y_move = -DatosJuego.y_move;
                         z.BackgroundImage = Properties.Resources.bloque_amarillo_roto;
@@ -187,7 +199,7 @@ namespace IArkanoid
 
                 if (z is CustomPicturebox && z.Tag == "greyblinded")
                 {
-                    if (Ball.Bounds.IntersectsWith(z.Bounds))
+                    if (pcbBall.Bounds.IntersectsWith(z.Bounds))
                     {
                         DatosJuego.y_move = -DatosJuego.y_move;
                         z.BackgroundImage = Properties.Resources.bloque_gris_roto;
@@ -199,21 +211,21 @@ namespace IArkanoid
         
         private void Ball_movement() //movimiento de pelota
         {
-            Ball.Left += DatosJuego.x_move;
-            Ball.Top += DatosJuego.y_move;
+            pcbBall.Left += DatosJuego.x_move;
+            pcbBall.Top += DatosJuego.y_move;
              
-            if (Ball.Left + Ball.Width > ClientSize.Width || Ball.Left < 0)
+            if (pcbBall.Left + pcbBall.Width > ClientSize.Width || pcbBall.Left < 0)
             {                                               // si la pelota colisiona con el extremo derecho o izquierdo
                 DatosJuego.x_move = -DatosJuego.x_move;     // de la pantalla se cambia la dirección en x
             }
 
-            if (Ball.Top < 0 || Ball.Bounds.IntersectsWith(lblLives.Bounds) || 
-                Ball.Bounds.IntersectsWith(picLogo.Bounds) || Ball.Bounds.IntersectsWith(lblScore.Bounds))
+            if (pcbBall.Top < 0 || pcbBall.Bounds.IntersectsWith(lblLives.Bounds) || 
+                pcbBall.Bounds.IntersectsWith(picLogo.Bounds) || pcbBall.Bounds.IntersectsWith(lblScore.Bounds))
             {
                 DatosJuego.y_move = -DatosJuego.y_move;    // Si la pelota colisiona con los elementos que estan arriba
             }                                              // se cambia la dirección en y 
 
-            if (Ball.Bounds.IntersectsWith(player.Bounds)) // Si la pelota colisiona con el jugador se cambia la 
+            if (pcbBall.Bounds.IntersectsWith(pcbPlayer.Bounds)) // Si la pelota colisiona con el jugador se cambia la 
             {                                              // dirección en y
                 DatosJuego.y_move = -DatosJuego.y_move;
             }
@@ -227,7 +239,6 @@ namespace IArkanoid
                {
                    case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia de
                        DatosJuego.startgame = true;    // valor a true y el juego inicia
-                       Controls.Remove(lblEnter);
                        break;
                    case Keys.Right:
                        break;
@@ -245,30 +256,30 @@ namespace IArkanoid
 
            if (DatosJuego.startgame == true) // El player se mueve con las teclas Right y Left
             {
-                if (e.KeyCode == Keys.Left && player.Left > 0)
+                if (e.KeyCode == Keys.Left && pcbPlayer.Left > 0)
                 {
-                    player.Left -= 11;
+                    pcbPlayer.Left -= 11;
                 }
 
-                if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) 
+                if (e.KeyCode == Keys.Right && pcbPlayer.Right < ClientSize.Width) 
                 {
-                    player.Left += 11;
+                    pcbPlayer.Left += 11;
                 }
             }
             else  // Si no se ha presionado la tecla enter la pelota se movera junto al player con las teclas
                   // Right y Left
             {     
                 
-                if (e.KeyCode == Keys.Left && player.Left > 0)
+                if (e.KeyCode == Keys.Left && pcbPlayer.Left > 0)
                     {
-                        player.Left -= 8;
-                        Ball.Left -= 8;
+                        pcbPlayer.Left -= 8;
+                        pcbBall.Left -= 8;
                     }
 
-                    if (e.KeyCode == Keys.Right && player.Right < ClientSize.Width) 
+                    if (e.KeyCode == Keys.Right && pcbPlayer.Right < ClientSize.Width) 
                     {
-                        player.Left += 8;
-                        Ball.Left += 8;
+                        pcbPlayer.Left += 8;
+                        pcbBall.Left += 8;
                     }
             }
         }

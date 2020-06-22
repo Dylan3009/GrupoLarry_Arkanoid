@@ -37,16 +37,11 @@ namespace IArkanoid
             this.lblLives = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
-            this.player = new System.Windows.Forms.PictureBox();
-            this.Ball = new System.Windows.Forms.PictureBox();
             this.heart3 = new System.Windows.Forms.PictureBox();
             this.heart2 = new System.Windows.Forms.PictureBox();
             this.heart1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblEnter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.Ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart1)).BeginInit();
@@ -104,29 +99,6 @@ namespace IArkanoid
             this.lblScore.Text = "SCORE:";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // player
-            // 
-            this.player.Image = global::IArkanoid.Properties.Resources.player;
-            this.player.Location = new System.Drawing.Point(296, 450);
-            this.player.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(162, 37);
-            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player.TabIndex = 3;
-            this.player.TabStop = false;
-            // 
-            // Ball
-            // 
-            this.Ball.BackColor = System.Drawing.Color.Transparent;
-            this.Ball.Image = global::IArkanoid.Properties.Resources.circle_cropped;
-            this.Ball.Location = new System.Drawing.Point(362, 411);
-            this.Ball.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Ball.Name = "Ball";
-            this.Ball.Size = new System.Drawing.Size(34, 33);
-            this.Ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Ball.TabIndex = 4;
-            this.Ball.TabStop = false;
-            // 
             // heart3
             // 
             this.heart3.BackColor = System.Drawing.Color.Transparent;
@@ -169,22 +141,6 @@ namespace IArkanoid
             this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblEnter
-            // 
-            this.lblEnter.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
-                ((int) (((byte) (64)))));
-            this.lblEnter.Font = new System.Drawing.Font("Impact", 26.25F,
-                ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblEnter.ForeColor = System.Drawing.Color.White;
-            this.lblEnter.Location = new System.Drawing.Point(285, 180);
-            this.lblEnter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEnter.Name = "lblEnter";
-            this.lblEnter.Size = new System.Drawing.Size(345, 108);
-            this.lblEnter.TabIndex = 8;
-            this.lblEnter.Text = "PRESS ENTER TO START";
-            this.lblEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // NewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -193,12 +149,9 @@ namespace IArkanoid
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(862, 510);
-            this.Controls.Add(this.lblEnter);
             this.Controls.Add(this.heart1);
             this.Controls.Add(this.heart2);
             this.Controls.Add(this.heart3);
-            this.Controls.Add(this.Ball);
-            this.Controls.Add(this.player);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.lblLives);
@@ -210,8 +163,6 @@ namespace IArkanoid
             this.Load += new System.EventHandler(this.NewGame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NewGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize) (this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.Ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart1)).EndInit();
@@ -222,13 +173,10 @@ namespace IArkanoid
 
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.PictureBox player;
-        private System.Windows.Forms.PictureBox Ball;
         private System.Windows.Forms.PictureBox heart1;
         private System.Windows.Forms.PictureBox heart2;
         private System.Windows.Forms.PictureBox heart3;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lblEnter;
         private System.Windows.Forms.PictureBox picLogo;
     }
 }
