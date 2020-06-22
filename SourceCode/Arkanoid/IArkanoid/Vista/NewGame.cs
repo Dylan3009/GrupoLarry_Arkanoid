@@ -109,7 +109,7 @@ namespace IArkanoid
         {
             if (DatosJuego.score > 89)
             {
-                timer1.Stop();
+                tmr1.Stop();
                 MessageBox.Show("Felicidades!", "Arkanoid", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 usuarDAO.actualizarpuntaje(DatosJuego.score,prueba); // Se almacena el puntaje en la base de datos
                 Application.Exit();
@@ -135,7 +135,7 @@ namespace IArkanoid
                             {
                                 Lives.live--;
                                 Controls.Remove(heart1);
-                                timer1.Stop();
+                                tmr1.Stop();
                                 if (Lives.live == 0)
                                 {
                                     throw new NoRemainingLivesException("Game Over");
@@ -147,7 +147,7 @@ namespace IArkanoid
                                     MessageBoxIcon.Information);
                             }
                             usuarDAO.actualizarpuntaje(DatosJuego.score, prueba); // se almecana el puntaje en la base 
-                            this.Close();                                         // de datos
+                            Application.Exit(); // de datos
                             break;
                     }
                 }
@@ -239,7 +239,7 @@ namespace IArkanoid
                {
                    case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia de
                        DatosJuego.startgame = true;    // valor a true y el juego inicia
-                       timer1.Start();
+                       tmr1.Start();
                        break;
                    case Keys.Right:
                        break;
@@ -288,7 +288,7 @@ namespace IArkanoid
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void tmr1_Tick(object sender, EventArgs e)
         {
             Scorecalculation();
             Blindedblock();

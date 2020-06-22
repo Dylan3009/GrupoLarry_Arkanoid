@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources =
                 new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnPuntajes = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picLogo)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.picLogo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnPuntajes, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnNewGame, 0, 1);
@@ -76,17 +76,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // picLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(831, 324);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogo.Image = ((System.Drawing.Image) (resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(3, 3);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(831, 324);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // btnPuntajes
             // 
@@ -226,7 +226,7 @@
             this.Text = "Arkanoid";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picLogo)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -235,7 +235,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -243,5 +242,6 @@
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnPuntajes;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

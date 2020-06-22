@@ -40,7 +40,7 @@ namespace IArkanoid
             this.heart3 = new System.Windows.Forms.PictureBox();
             this.heart2 = new System.Windows.Forms.PictureBox();
             this.heart1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tmr1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart2)).BeginInit();
@@ -135,11 +135,11 @@ namespace IArkanoid
             this.heart1.TabIndex = 7;
             this.heart1.TabStop = false;
             // 
-            // timer1
+            // tmr1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 25;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tmr1.Enabled = true;
+            this.tmr1.Interval = 25;
+            this.tmr1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // NewGame
             // 
@@ -176,7 +176,7 @@ namespace IArkanoid
         private System.Windows.Forms.PictureBox heart1;
         private System.Windows.Forms.PictureBox heart2;
         private System.Windows.Forms.PictureBox heart3;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Timer tmr1;
     }
 }
