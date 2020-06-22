@@ -31,12 +31,9 @@ namespace IArkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 =
-                new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 =
-                new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 =
-                new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRankings = new System.Windows.Forms.Label();
             this.dgvScores = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -60,14 +57,12 @@ namespace IArkanoid
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.lblRankings, 12);
             this.lblRankings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblRankings.Font = new System.Drawing.Font("Impact", 36F,
-                ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblRankings.Font = new System.Drawing.Font("Impact", 36F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblRankings.ForeColor = System.Drawing.Color.White;
             this.lblRankings.Location = new System.Drawing.Point(2, 0);
             this.lblRankings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRankings.Name = "lblRankings";
-            this.lblRankings.Size = new System.Drawing.Size(949, 136);
+            this.lblRankings.Size = new System.Drawing.Size(711, 75);
             this.lblRankings.TabIndex = 0;
             this.lblRankings.Text = "RANKINGS";
             this.lblRankings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,8 +70,7 @@ namespace IArkanoid
             // dgvScores
             // 
             this.dgvScores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvScores.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
-                ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.dgvScores.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.dgvScores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvScores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -87,18 +81,17 @@ namespace IArkanoid
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvScores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvScores.ColumnHeadersHeightSizeMode =
-                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvScores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dgvScores, 11);
+            this.dgvScores.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvScores.EnableHeadersVisualStyles = false;
             this.dgvScores.GridColor = System.Drawing.Color.Cyan;
-            this.dgvScores.Location = new System.Drawing.Point(372, 195);
-            this.dgvScores.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.dgvScores.Location = new System.Drawing.Point(280, 108);
+            this.dgvScores.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvScores.Name = "dgvScores";
             this.dgvScores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
-                ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -106,17 +99,14 @@ namespace IArkanoid
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvScores.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvScores.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
-                ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 8.25F,
-                ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 8.25F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvScores.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tableLayoutPanel1.SetRowSpan(this.dgvScores, 10);
-            this.dgvScores.Size = new System.Drawing.Size(579, 580);
+            this.dgvScores.Size = new System.Drawing.Size(433, 316);
             this.dgvScores.TabIndex = 1;
             // 
             // btnRegresar
@@ -126,18 +116,15 @@ namespace IArkanoid
             this.tableLayoutPanel1.SetColumnSpan(this.btnRegresar, 4);
             this.btnRegresar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
-                ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
-                ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnRegresar.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(389, 789);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnRegresar.Location = new System.Drawing.Point(292, 430);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(213, 88);
+            this.btnRegresar.Size = new System.Drawing.Size(159, 54);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -146,13 +133,12 @@ namespace IArkanoid
             // lblrank
             // 
             this.lblrank.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblrank.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblrank.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblrank.ForeColor = System.Drawing.Color.White;
-            this.lblrank.Location = new System.Drawing.Point(182, 136);
+            this.lblrank.Location = new System.Drawing.Point(136, 75);
             this.lblrank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblrank.Name = "lblrank";
-            this.lblrank.Size = new System.Drawing.Size(186, 55);
+            this.lblrank.Size = new System.Drawing.Size(140, 30);
             this.lblrank.TabIndex = 3;
             this.lblrank.Text = "RANK";
             this.lblrank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,13 +146,12 @@ namespace IArkanoid
             // lbl1
             // 
             this.lbl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl1.ForeColor = System.Drawing.Color.White;
-            this.lbl1.Location = new System.Drawing.Point(182, 191);
+            this.lbl1.Location = new System.Drawing.Point(136, 105);
             this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(186, 63);
+            this.lbl1.Size = new System.Drawing.Size(140, 34);
             this.lbl1.TabIndex = 4;
             this.lbl1.Text = "1";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,13 +159,12 @@ namespace IArkanoid
             // lbl2
             // 
             this.lbl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl2.ForeColor = System.Drawing.Color.White;
-            this.lbl2.Location = new System.Drawing.Point(182, 254);
+            this.lbl2.Location = new System.Drawing.Point(136, 139);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(186, 59);
+            this.lbl2.Size = new System.Drawing.Size(140, 32);
             this.lbl2.TabIndex = 5;
             this.lbl2.Text = "2";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,13 +172,12 @@ namespace IArkanoid
             // lbl3
             // 
             this.lbl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl3.ForeColor = System.Drawing.Color.White;
-            this.lbl3.Location = new System.Drawing.Point(182, 313);
+            this.lbl3.Location = new System.Drawing.Point(136, 171);
             this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(186, 59);
+            this.lbl3.Size = new System.Drawing.Size(140, 32);
             this.lbl3.TabIndex = 6;
             this.lbl3.Text = "3";
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,13 +185,12 @@ namespace IArkanoid
             // lbl10
             // 
             this.lbl10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl10.ForeColor = System.Drawing.Color.White;
-            this.lbl10.Location = new System.Drawing.Point(182, 726);
+            this.lbl10.Location = new System.Drawing.Point(136, 395);
             this.lbl10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(186, 59);
+            this.lbl10.Size = new System.Drawing.Size(140, 32);
             this.lbl10.TabIndex = 7;
             this.lbl10.Text = "10";
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,13 +198,12 @@ namespace IArkanoid
             // lbl9
             // 
             this.lbl9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl9.ForeColor = System.Drawing.Color.White;
-            this.lbl9.Location = new System.Drawing.Point(182, 667);
+            this.lbl9.Location = new System.Drawing.Point(136, 363);
             this.lbl9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(186, 59);
+            this.lbl9.Size = new System.Drawing.Size(140, 32);
             this.lbl9.TabIndex = 8;
             this.lbl9.Text = "9";
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,13 +211,12 @@ namespace IArkanoid
             // lbl4
             // 
             this.lbl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl4.ForeColor = System.Drawing.Color.White;
-            this.lbl4.Location = new System.Drawing.Point(182, 372);
+            this.lbl4.Location = new System.Drawing.Point(136, 203);
             this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(186, 59);
+            this.lbl4.Size = new System.Drawing.Size(140, 32);
             this.lbl4.TabIndex = 9;
             this.lbl4.Text = "4";
             this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,13 +224,12 @@ namespace IArkanoid
             // lbl6
             // 
             this.lbl6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl6.ForeColor = System.Drawing.Color.White;
-            this.lbl6.Location = new System.Drawing.Point(182, 490);
+            this.lbl6.Location = new System.Drawing.Point(136, 267);
             this.lbl6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(186, 59);
+            this.lbl6.Size = new System.Drawing.Size(140, 32);
             this.lbl6.TabIndex = 10;
             this.lbl6.Text = "6";
             this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,13 +237,12 @@ namespace IArkanoid
             // lbl5
             // 
             this.lbl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl5.ForeColor = System.Drawing.Color.White;
-            this.lbl5.Location = new System.Drawing.Point(182, 431);
+            this.lbl5.Location = new System.Drawing.Point(136, 235);
             this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(186, 59);
+            this.lbl5.Size = new System.Drawing.Size(140, 32);
             this.lbl5.TabIndex = 11;
             this.lbl5.Text = "5";
             this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,13 +250,12 @@ namespace IArkanoid
             // lbl8
             // 
             this.lbl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl8.ForeColor = System.Drawing.Color.White;
-            this.lbl8.Location = new System.Drawing.Point(182, 608);
+            this.lbl8.Location = new System.Drawing.Point(136, 331);
             this.lbl8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(186, 59);
+            this.lbl8.Size = new System.Drawing.Size(140, 32);
             this.lbl8.TabIndex = 12;
             this.lbl8.Text = "8";
             this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,13 +263,12 @@ namespace IArkanoid
             // lbl7
             // 
             this.lbl7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl7.ForeColor = System.Drawing.Color.White;
-            this.lbl7.Location = new System.Drawing.Point(182, 549);
+            this.lbl7.Location = new System.Drawing.Point(136, 299);
             this.lbl7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(186, 59);
+            this.lbl7.Size = new System.Drawing.Size(140, 32);
             this.lbl7.TabIndex = 13;
             this.lbl7.Text = "7";
             this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,30 +277,18 @@ namespace IArkanoid
             // 
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 12;
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.82476F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9443861F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8394544F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.049318F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.82476F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9443861F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8394544F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.049318F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.272182F));
             this.tableLayoutPanel1.Controls.Add(this.lblRankings, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl10, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.lbl9, 0, 10);
@@ -341,49 +305,35 @@ namespace IArkanoid
             this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 3, 12);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.44457F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.242906F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.150965F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.29638F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 881);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.44457F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.242906F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.150965F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.750823F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.29638F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(715, 487);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // Scores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
-                ((int) (((byte) (64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(953, 881);
+            this.ClientSize = new System.Drawing.Size(715, 487);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Scores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scores";
@@ -394,22 +344,22 @@ namespace IArkanoid
             this.ResumeLayout(false);
         }
 
-        #endregion
-
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.DataGridView dgvScores;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Label lblrank;
-        private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl10;
-        private System.Windows.Forms.Label lbl9;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.Label lbl8;
+        private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Label lbl8;
+        private System.Windows.Forms.Label lbl9;
+        private System.Windows.Forms.Label lblrank;
         private System.Windows.Forms.Label lblRankings;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+
+        #endregion
     }
 }

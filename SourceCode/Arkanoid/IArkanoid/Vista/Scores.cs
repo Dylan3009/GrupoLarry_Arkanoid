@@ -35,7 +35,7 @@ namespace IArkanoid
             for (int i = 0; i < lista.Count; i++)
             {
                 DataGridViewRow row = dgvScores.Rows[i];
-                row.Height = 50;
+                row.Height = 44;
                 this.dgvScores.Columns[0].DefaultCellStyle
                     .Alignment = DataGridViewContentAlignment.MiddleCenter;
                 this.dgvScores.Columns[1].DefaultCellStyle
