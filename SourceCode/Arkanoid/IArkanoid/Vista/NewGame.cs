@@ -239,13 +239,17 @@ namespace IArkanoid
                {
                    case Keys.Enter:                    // Cuando el usuario presiona Enter DatosJuego cambia de
                        DatosJuego.startgame = true;    // valor a true y el juego inicia
+                       timer1.Start();
                        break;
                    case Keys.Right:
                        break;
                    case Keys.Left:
                        break;
                    default:
-                       throw new OtherKeyException("Presiona Enter para iniciar el juego.");
+                       if (DatosJuego.startgame == false)
+                       {
+                           throw new OtherKeyException("Presiona Enter para iniciar el juego.");
+                       }
                        break;
                }
            }
