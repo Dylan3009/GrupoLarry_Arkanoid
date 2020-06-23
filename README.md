@@ -1,9 +1,9 @@
 ﻿# GrupoLarry 
 ## Integrantes
 1. Alberto Enrique De León Quiñonez #00087919
-2. Dylan Moises Melendez Linares #00087018
-3. Rene Armando Flores Cortez #00118719 
-4. Rene Guillermo Canales Climaco #00001318
+2. Dylan Moisés Meléndez Linares #00087018
+3. René Armando Flores Cortez #00118719 
+4. René Guillermo Canales Clímaco #00001318
 ___
 ## IDE
 JetBrains Rider 2019.3.4
