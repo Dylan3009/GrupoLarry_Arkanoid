@@ -101,7 +101,8 @@ namespace IArkanoid
             // 
             // heart3
             // 
-            this.heart3.BackColor = System.Drawing.Color.Transparent;
+            this.heart3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
+                ((int) (((byte) (64)))));
             this.heart3.Image = ((System.Drawing.Image) (resources.GetObject("heart3.Image")));
             this.heart3.Location = new System.Drawing.Point(79, 180);
             this.heart3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -113,7 +114,8 @@ namespace IArkanoid
             // 
             // heart2
             // 
-            this.heart2.BackColor = System.Drawing.Color.Transparent;
+            this.heart2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
+                ((int) (((byte) (64)))));
             this.heart2.Image = ((System.Drawing.Image) (resources.GetObject("heart2.Image")));
             this.heart2.Location = new System.Drawing.Point(40, 180);
             this.heart2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -125,7 +127,8 @@ namespace IArkanoid
             // 
             // heart1
             // 
-            this.heart1.BackColor = System.Drawing.Color.Transparent;
+            this.heart1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))),
+                ((int) (((byte) (64)))));
             this.heart1.Image = ((System.Drawing.Image) (resources.GetObject("heart1.Image")));
             this.heart1.Location = new System.Drawing.Point(0, 180);
             this.heart1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
